@@ -1,0 +1,44 @@
+[
+    {
+        "label": "FacetPanel",
+        "description": "Custom Facet panel with configurable filters",
+        "frameWorks": [],
+        "isBookmarked": true,
+        "isLiked": true,
+        "key": "facetPanel"
+    },
+    {
+        "label": "FacetDropdown",
+        "frameWorks": [],
+        "description": "Facet Dropdown with count,multi-selection,esc-key especically for search-applications, with virtual scroll !",
+        "isBookmarked": true,
+        "isLiked": true,
+        "key": "facetDropdown"
+    },
+    {
+        "label": "Paginator",
+        "frameWorks": [],
+        "description": "Custom Paginator for Search-Results type applications",
+        "isBookmarked": true,
+        "isLiked": true,
+        "key": "paginator"
+    },
+    {
+        "label": "StickyTable",
+        "frameWorks": [],
+        "key": "stickyTable",
+        "isBookmarked": true,
+        "isLiked": true,
+        "description": "Pure css Table, first column sticky with dynamic headers"
+    },
+    {
+        "key": "headerBar",
+        "label": "Header Bar",
+        "frameWorks": [
+            "React"
+        ],
+        "isBookmarked": true,
+        "description": "Simple-search Header Bar Component",
+        "isLiked": true
+    }
+]

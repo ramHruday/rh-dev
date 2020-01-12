@@ -1,19 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
+import ComponentLibrary from '../../assets/json/components.json';
+import DeckCard from '../../containers/deck-card/deck-card';
+
 const MainPage: React.FC = () => {
   return (
     <Container fluid>
-      <Row>
-        <Col>1 of 2</Col>
-        <Col>2 of 2</Col>
-      </Row>
-      <Row>
-        <Col>1 of 3</Col>
-        <Col>2 of 3</Col>
-        <Col>3 of 3</Col>
+      <h1 className="abbr">Your feed</h1>
+      <Row noGutters>
+        {ComponentLibrary.length > 0 ? (
+          ComponentLibrary.map((component: any) => (
+            <Col sm="12" md="2">
+              <DeckCard component={component} />
+            </Col>
+          ))
+        ) : (
+          <div>No Items Found</div>
+        )}
       </Row>
     </Container>
   );

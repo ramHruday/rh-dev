@@ -1,0 +1,13 @@
+dump
+
+
+// {
+//     "key": "inline-editable",
+//     "label": "Inline-editable",
+//     "frameWorks": [
+//         "TS"
+//     ],
+//     "isBookmarked": false,
+//     "isLiked": true,
+//     "description": "Make Text editable, onedit,onsave callbacks with keyboard events"
+// }

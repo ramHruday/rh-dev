@@ -11,8 +11,6 @@ interface IHeaderBarProps {
 }
 
 const HeaderBar: React.FC<IHeaderBarProps> = props => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   return (
     <>
       <header
