@@ -2,6 +2,8 @@
   "name": "react-dev",
   "version": "0.1.0",
   "private": true,
+  "description": "(share)=>{if(reusable && (components || algorithms)) {return \"across-team\";}}",
+  "main": "index.ts",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -19,7 +21,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test:tsc": "tsc -p tsconfig.test.json -w"
   },
   "eslintConfig": {
     "extends": "react-app"
