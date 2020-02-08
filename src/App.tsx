@@ -5,11 +5,14 @@ import './App.css';
 
 import HeaderBar from './components/header-bar/header-bar';
 import PlayGround from './containers/playground/playground';
+import SideNavBar from './containers/side-nav/side-nav';
 import MainPage from './module/main-page/main-page';
 
 const App: React.FC = () => {
   return (
     <div className="App">
+      <SideNavBar />
+
       <HeaderBar brandName="RH-DEV" />
       <Router>
         <Switch>

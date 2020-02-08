@@ -1,19 +1,32 @@
 import React from 'react';
-import Col from 'react-bootstrap/Col';
+import { Col } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import { useParams } from 'react-router-dom';
 
-import ComponentSwitcher from '../../components/component-switch/component-switch';
+import './playground.scss';
 
 const PlayGround: React.FC = () => {
-  const { componentId } = useParams();
   return (
-    <Container fluid>
-      <h1 className="abbr">Your feed</h1>
+    <Container>
+      <h1 className="abbr pt-5 pb-2">Component PlayGround</h1>
       <Row noGutters>
-        <Col sm="12" md="6">
-          <ComponentSwitcher id={componentId} component={componentId} />
+        {/* <LiveProvider code="<strong>Hello World!</strong>">
+          <Col sm="12" md="6" className="live-editor">
+            <LiveEditor />
+          </Col>
+          <Col sm="12" md="6" className="live-preview px-4">
+            <LivePreview />
+          </Col>
+          <LiveError />
+        </LiveProvider> */}
+        <Col className="sandbox-editor p-2 bg-light">
+          <iframe
+            src="https://codesandbox.io/embed/reverent-mccarthy-w8g47?fontsize=14&hidenavigation=1&theme=dark"
+            className="i-frame"
+            title="sandbox"
+            allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb"
+            sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+          ></iframe>
         </Col>
       </Row>
     </Container>
