@@ -6,3 +6,8 @@
   width: 13rem;
   font-size: xx-large;
 }
+
+.app-header {
+  position: fixed;
+  z-index: 9999;
+}

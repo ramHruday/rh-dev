@@ -16,7 +16,7 @@ const HeaderBar: React.FC<IHeaderBarProps> = props => {
       <header
         className={`app-header shadow-sm d-flex justify-content-between w-100 align-items-stretch flex-row ${props.className}`}
       >
-        <div className="px-2 head-logo">
+        <div className="px-2 head-logo bg-white">
           <img src={brandName} alt={props.brandName} className="pb-2" />
         </div>
         <div className="bg-light w-100 d-flex justify-content-end pr-2">

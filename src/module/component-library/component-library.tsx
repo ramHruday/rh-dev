@@ -1,19 +1,18 @@
 import React from 'react';
+import { Container, Row } from 'react-bootstrap';
 import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
 
 import ComponentLibrary from '../../assets/json/components.json';
 import DeckCard from '../../containers/deck-card/deck-card';
 
-const MainPage: React.FC = () => {
+const Library: React.FC = () => {
   return (
     <Container fluid>
       <h1 className="abbr">Your feed</h1>
-      <Row noGutters>
+      <Row>
         {ComponentLibrary.length > 0 ? (
           ComponentLibrary.map((component: any) => (
-            <Col sm="12" md="2">
+            <Col sm="12" md="6" lg="3">
               <DeckCard component={component} />
             </Col>
           ))
@@ -25,4 +24,4 @@ const MainPage: React.FC = () => {
   );
 };
 
-export default MainPage;
+export default Library;
