@@ -1,11 +1,17 @@
 import React from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
+
+import './home.scss';
 
 const Home: React.FC = () => {
   return (
     <Container fluid>
-      <h2>Your feed</h2>
-      <Row></Row>
+      <Row>
+        <Col sm="12" md="6" className="section">
+          My curated code snippets/ logics and tricks
+        </Col>
+        <Col sm="12" md="6" className="bg-light"></Col>
+      </Row>
     </Container>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, GitHub, Home, Linkedin, User } from 'react-feather';
+import { Box, GitHub, Home, Linkedin, Play, User } from 'react-feather';
 import { Link } from 'react-router-dom';
 
 import './side-nav.scss';
@@ -7,11 +7,11 @@ import './side-nav.scss';
 const SideNavBar: React.FC = () => {
   return (
     <>
-      <nav className="app-nav d-none d-md-flex flex-column justify-content-between">
+      <nav className="app-nav d-none d-md-flex flex-column justify-content-between ">
         <NavItemList />
         <SocialWebBox />
       </nav>
-      <nav className="app-pill-nav d-md-none">
+      <nav className="app-pill-nav d-md-none ">
         <NavItemList />
       </nav>
     </>
@@ -24,11 +24,14 @@ const NavItemList: React.FC = () => {
       <Link to="/">
         <Home key="home" className="cursor-pointer" />
       </Link>
-      <Link to="/">
-        <User key="user" className="cursor-pointer" />
-      </Link>
       <Link to="/library">
         <Box key="library" className="cursor-pointer" />
+      </Link>
+      <Link to="/play">
+        <Play key="play" className="cursor-pointer" />
+      </Link>
+      <Link to="/">
+        <User key="user" className="cursor-pointer" />
       </Link>
     </div>
   );
