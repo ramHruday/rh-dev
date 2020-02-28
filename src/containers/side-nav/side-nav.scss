@@ -3,10 +3,44 @@
   position: fixed;
   left: 0px;
   width: 3.5rem;
-  height: calc(100vh - 0.5rem);
-  color: rgba(255, 255, 255, 0.6);
+  height: calc(100vh - 3rem);
+  color: white;
   font-size: 1.4rem;
   -webkit-box-align: center;
   align-items: center;
   background-color: #159bfd;
+  z-index: 9999;
+  .nav-list {
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    height: 50vh !important;
+    flex-direction: column;
+  }
+  .social-list {
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    height: 15vh !important;
+  }
+}
+
+.app-pill-nav {
+  bottom: 0;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  height: 3.5rem;
+  color: white;
+  font-size: 1.4rem;
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: #159bfd;
+  z-index: 9999;
+  .nav-list {
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+  }
 }

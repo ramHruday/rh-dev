@@ -11,12 +11,12 @@ import Home from './module/home/home';
 
 const App: React.FC = () => {
   return (
-    <div className="wrapper h-100">
-      <HeaderBar brandName="RH-DEV" />
-      <div className="d-flex h-100">
-        <SideNavBar />
-        <div className="p-4 ml-5 mt-5">
-          <Router>
+    <Router>
+      <div className="wrapper h-100">
+        <HeaderBar brandName="RH-DEV" />
+        <div className="d-flex h-100">
+          <SideNavBar />
+          <div className="p-4 ml-md-5 mt-5">
             <Switch>
               <Route path="/play/:componentId">
                 <PlayGround />
@@ -28,10 +28,10 @@ const App: React.FC = () => {
                 <Home />
               </Route>
             </Switch>
-          </Router>
+          </div>
         </div>
       </div>
-    </div>
+    </Router>
   );
 };
 
