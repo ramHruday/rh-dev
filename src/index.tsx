@@ -10,7 +10,7 @@ import * as serviceWorker from './serviceWorker';
 // import 'typeface-roboto';
 
 ReactDOM.render(
-  <BrowserRouter basename="/search">
+  <BrowserRouter basename="/rh-dev">
     <App />
   </BrowserRouter>,
   document.getElementById("root")
