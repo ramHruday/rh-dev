@@ -40,8 +40,20 @@ const NavItemList: React.FC = () => {
 const SocialWebBox: React.FC = () => {
   return (
     <div className="social-list d-flex p-2 w-100 flex-column justify-content-around">
-      <GitHub key="git" className="cursor-pointer" />
-      <Linkedin className="" />
+      <a
+        href="https://github.com/ramHruday"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <GitHub />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/rama-hrudayb/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Linkedin />
+      </a>
     </div>
   );
 };
