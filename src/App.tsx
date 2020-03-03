@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import './App.css';
 
@@ -11,27 +11,25 @@ import Home from './module/home/home';
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <div className="wrapper h-100">
-        <HeaderBar brandName="RH-DEV" />
-        <div className="d-flex h-100">
-          <SideNavBar />
-          <div className="p-4 ml-md-5 mt-5 w-100">
-            <Switch>
-              <Route path="/play/:componentId">
-                <PlayGround />
-              </Route>
-              <Route path="/library">
-                <Library />
-              </Route>
-              <Route path="/">
-                <Home />
-              </Route>
-            </Switch>
-          </div>
+    <div className="wrapper h-100">
+      <HeaderBar brandName="RH-DEV" />
+      <div className="d-flex h-100">
+        <SideNavBar />
+        <div className="p-4 ml-md-5 mt-5 w-100">
+          <Switch>
+            <Route path="/play/:componentId">
+              <PlayGround />
+            </Route>
+            <Route path="/library">
+              <Library />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
         </div>
       </div>
-    </Router>
+    </div>
   );
 };
 
