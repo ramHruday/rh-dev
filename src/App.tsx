@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import './App.css';
 
 import HeaderBar from './components/header-bar/header-bar';
+import CodePlay from './containers/code-play/code-play';
 import PlayGround from './containers/playground/playground';
 import SideNavBar from './containers/side-nav/side-nav';
 import Library from './module/component-library/component-library';
@@ -17,6 +18,9 @@ const App: React.FC = () => {
         <SideNavBar />
         <div className="p-4 ml-md-5 mt-5 w-100">
           <Switch>
+            <Route path="/code-play">
+              <CodePlay />
+            </Route>
             <Route path="/play/:componentId">
               <PlayGround />
             </Route>

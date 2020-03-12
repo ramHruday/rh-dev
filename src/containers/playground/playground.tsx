@@ -10,15 +10,6 @@ const PlayGround: React.FC = () => {
     <Container>
       <h1 className="abbr pt-5 pb-2">Component PlayGround</h1>
       <Row noGutters>
-        {/* <LiveProvider code="<strong>Hello World!</strong>">
-          <Col sm="12" md="6" className="live-editor">
-            <LiveEditor />
-          </Col>
-          <Col sm="12" md="6" className="live-preview px-4">
-            <LivePreview />
-          </Col>
-          <LiveError />
-        </LiveProvider> */}
         <Col className="sandbox-editor p-2 bg-light">
           <iframe
             src="https://codesandbox.io/embed/reverent-mccarthy-w8g47?fontsize=14&hidenavigation=1&theme=dark"
