@@ -27,7 +27,7 @@ const NavItemList: React.FC = () => {
       <Link to="/library">
         <Box key="library" className="cursor-pointer" />
       </Link>
-      <Link to="/play">
+      <Link to="/code-play">
         <Play key="play" className="cursor-pointer" />
       </Link>
       <Link to="/">
