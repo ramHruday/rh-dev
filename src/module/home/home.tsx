@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 
 import './home.scss';
 
-import uc from '../../assets/uc.gif';
+import uc from '../../assets/uc-impro.gif';
 
 const Home: React.FC = () => {
   return (
