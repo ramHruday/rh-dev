@@ -13,7 +13,7 @@ const Home: React.FC = () => {
           My curated code snippets/ logics and tricks
         </Col>
         <Col sm="12" md="6" className="section">
-          <img src={uc} alt="site under construction" />
+          <img src={uc} alt="site under construction" className="w-100" />
         </Col>
         {/* <Col sm="12" md="6" className="bg-light"></Col> */}
       </Row>
