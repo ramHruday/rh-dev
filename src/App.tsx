@@ -16,7 +16,7 @@ const App: React.FC = () => {
       <HeaderBar brandName="RH-DEV" />
       <div className="d-flex h-100">
         <SideNavBar />
-        <div className="p-4 ml-md-5 mt-5 w-100">
+        <div className="p-4 ml-md-5 mt-5 w-100 mb-4">
           <Switch>
             <Route path="/code-play">
               <CodePlay />
