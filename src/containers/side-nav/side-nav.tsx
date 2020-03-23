@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, GitHub, Home, Linkedin, Play, User } from 'react-feather';
+import { Box, GitHub, Home, Linkedin, Octagon, Play, User } from 'react-feather';
 import { Link } from 'react-router-dom';
 
 import './side-nav.scss';
@@ -32,6 +32,9 @@ const NavItemList: React.FC = () => {
       </Link>
       <Link to="/">
         <User key="user" className="cursor-pointer" />
+      </Link>
+      <Link to="/compare">
+        <Octagon key="user" className="cursor-pointer" />
       </Link>
     </div>
   );

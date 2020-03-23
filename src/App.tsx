@@ -21,7 +21,7 @@ const App: React.FC = () => {
             <Route path="/code-play">
               <CodePlay />
             </Route>
-            <Route path="/play/:componentId">
+            <Route path="/compare">
               <PlayGround />
             </Route>
             <Route path="/library">
