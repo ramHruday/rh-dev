@@ -10,7 +10,7 @@ const PlayGround: React.FC = () => {
   const [oldObject, setOldObject] = useState("");
 
   //convert items of csv cell from string, array to excel readable strings
-  const properString = (item: string | []) => {
+  const properString = (item: string | [] | number) => {
     switch (typeof item) {
       case "string":
         return item.replace(/,/g, " & ").replace(/(\r\n|\n|\r)/gm, "");
@@ -23,8 +23,10 @@ const PlayGround: React.FC = () => {
                 .replace(/(\r\n|\n|\r)/gm, "") // replaces ' \N\R' in each string of array
             : item
           : "NA";
+      case "number":
+        return item.toString();
       default:
-        return "NA-not handled";
+        return item;
     }
   };
 
@@ -32,6 +34,7 @@ const PlayGround: React.FC = () => {
     const newJson = JSON.parse(json1);
     const oldJson = JSON.parse(json2);
     let str = "";
+    str += `${newJson["id"]}\n\n`;
     for (const key in newJson) {
       if (newJson.hasOwnProperty(key)) {
         const newSolar = properString(newJson[key]);
