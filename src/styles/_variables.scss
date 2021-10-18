@@ -10,7 +10,7 @@ $light-gray: #b4b4b4;
 $bg-grey: #eef2f7;
 
 // button color overrides
-$primary: #0f5dac;
+$primary: #159bfd;
 $danger: #a52727;
 $primary-btn-gradient: linear-gradient(180deg, #0b79d8 0%, #0f5dac 100%);
 $danger-btn-gradient: linear-gradient(180deg, #ed5353 0%, #a52727 100%);
@@ -18,7 +18,8 @@ $danger-btn-border: 1px solid #e93f3f;
 
 $colors: (
   "gray": $light-gray,
-  "gray-dark": $gray
+  "gray-dark": $gray,
+  "primary":#159bfd
 );
 
 $body-bg: #efefef;

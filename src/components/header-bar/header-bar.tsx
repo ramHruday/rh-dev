@@ -1,9 +1,8 @@
 import React from 'react';
-
+import brandName from '../../assets/RH-DEV.png';
 import './header-bar.scss';
 
-import brandName from '../../assets/RH-DEV.png';
-import searcIcon from '../../assets/Vector.svg';
+
 
 interface IHeaderBarProps {
   brandName: string;
@@ -19,9 +18,9 @@ const HeaderBar: React.FC<IHeaderBarProps> = props => {
         <div className="px-2 head-logo bg-white">
           <img src={brandName} alt={props.brandName} className="pb-2" />
         </div>
-        <div className="bg-light w-100 d-flex justify-content-end pr-2">
+        {/* <div className="bg-light w-100 d-flex justify-content-end pr-2">
           <img src={searcIcon} alt="search" />
-        </div>
+        </div> */}
       </header>
     </>
   );

@@ -4,12 +4,11 @@
 - Google SSO
 
 ## Goals
+ 
+- My skills and their references
+- About me
+- Projects and Github links
 
-- Expose a library of reusable components that can atleast be used across all the projects.
-- give developer ability to copy bare code as component
-- Styles for a single enterprise
-- Logos storage
-- project itself should be exposed as a set of reusable compnents
 
 ## Project Structure
 

@@ -1,15 +1,21 @@
-import React from 'react';
-import { Box, GitHub, Home, Linkedin, Octagon, Play, User } from 'react-feather';
-import { Link } from 'react-router-dom';
-
-import './side-nav.scss';
+import React, { useState } from "react";
+import {
+  ChevronsLeft,
+  ChevronsRight,
+  GitHub,
+  Home,
+  Info,
+  Linkedin,
+  Zap,
+} from "react-feather";
+import { Link } from "react-router-dom";
+import "./side-nav.scss";
 
 const SideNavBar: React.FC = () => {
   return (
     <>
-      <nav className="app-nav d-none d-md-flex flex-column justify-content-between ">
+      <nav className="h-100 app-nav d-none d-md-flex flex-column justify-content-between position-fixed text-white bg-primary align-items-center">
         <NavItemList />
-        <SocialWebBox />
       </nav>
       <nav className="app-pill-nav d-md-none ">
         <NavItemList />
@@ -19,45 +25,57 @@ const SideNavBar: React.FC = () => {
 };
 
 const NavItemList: React.FC = () => {
+  const [isExpanded, setIsExpanded] = useState(true);
   return (
-    <div className="nav-list p-2 w-100 h-100 justify-content-around">
-      <Link to="/">
-        <Home key="home" className="cursor-pointer" />
-      </Link>
-      <Link to="/library">
-        <Box key="library" className="cursor-pointer" />
-      </Link>
-      <Link to="/code-play">
-        <Play key="play" className="cursor-pointer" />
-      </Link>
-      <Link to="/">
-        <User key="user" className="cursor-pointer" />
-      </Link>
-      <Link to="/compare">
-        <Octagon key="user" className="cursor-pointer" />
-      </Link>
-    </div>
-  );
-};
-
-const SocialWebBox: React.FC = () => {
-  return (
-    <div className="social-list d-flex p-2 w-100 flex-column justify-content-around">
-      <a
-        href="https://github.com/ramHruday"
-        target="_blank"
-        rel="noopener noreferrer"
+    <>
+      <div
+        className="nav-list p-2 w-100 h-50 d-flex flex-column justify-content-around align-items-center position-relative"
+        style={{ width: "3.5rem" }}
       >
-        <GitHub />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/rama-hrudayb/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Linkedin />
-      </a>
-    </div>
+        {isExpanded ? (
+          <>
+            <Link to="/">
+              <Home />
+            </Link>
+            <Link to="/library">
+              <Zap />
+            </Link>
+            <Link to="/code-play">
+              <Info />
+            </Link>
+          </>
+        ) : (
+          <>
+            <Link to="/">Home</Link>
+            <Link to="/library">Skills</Link>
+            <Link to="/code-play">About me</Link>
+          </>
+        )}
+      </div>
+      <div className="social-list d-flex p-2 w-100  h-25 d-flex flex-column justify-content-around align-items-center">
+        <a
+          href="https://github.com/ramHruday"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="my-2"
+        >
+          <GitHub />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/rama-hrudayb/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="my-2"
+        >
+          <Linkedin />
+        </a>
+        {isExpanded ? (
+          <ChevronsLeft onClick={() => setIsExpanded(!isExpanded)} />
+        ) : (
+          <ChevronsRight onClick={() => setIsExpanded(!isExpanded)} />
+        )}
+      </div>
+    </>
   );
 };
 

@@ -77,7 +77,7 @@ const PlayGround: React.FC = () => {
 
           <Form.Control
             as="textarea"
-            rows="24"
+            rows={24}
             value={newObject}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               setNewObject(e.target.value)
@@ -89,7 +89,7 @@ const PlayGround: React.FC = () => {
 
           <Form.Control
             as="textarea"
-            rows="24"
+            rows={24}
             value={oldObject}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               setOldObject(e.target.value)
