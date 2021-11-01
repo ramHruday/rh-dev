@@ -1,5 +1,13 @@
 .app-nav {
-  
   z-index: 9999;
   box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25);
+  
+}
+
+.app-pill-nav {
+  bottom: 0;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  z-index: 9999;
 }

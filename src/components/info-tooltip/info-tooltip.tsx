@@ -1,5 +1,5 @@
-import React from 'react';
-import { OverlayTrigger, Popover } from 'react-bootstrap';
+import React from "react";
+import { OverlayTrigger, Popover } from "react-bootstrap";
 
 type TriggerType = "hover" | "click" | "focus";
 
@@ -20,8 +20,8 @@ const InfoTooltip: React.FC<{
       placement="right"
       overlay={
         <Popover id="popover-basic">
-          <Popover.Title as="h3">{title}</Popover.Title>
-          <Popover.Content>{content ? content : children}</Popover.Content>
+          <Popover.Header as="h3">{title}</Popover.Header>
+          <Popover.Body>{content ? content : children}</Popover.Body>
         </Popover>
       }
       rootClose={true}

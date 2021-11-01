@@ -1,81 +1,65 @@
-import React, { useState } from "react";
-import {
-  ChevronsLeft,
-  ChevronsRight,
-  GitHub,
-  Home,
-  Info,
-  Linkedin,
-  Zap,
-} from "react-feather";
+import React from "react";
+import { GitHub, Home, Info, Linkedin, Zap } from "react-feather";
 import { Link } from "react-router-dom";
 import "./side-nav.scss";
 
 const SideNavBar: React.FC = () => {
   return (
     <>
-      <nav className="h-100 app-nav d-none d-md-flex flex-column justify-content-between position-fixed text-white bg-primary align-items-center">
-        <NavItemList />
+      <nav
+        className="app-nav d-none d-md-flex flex-column justify-content-between text-white bg-primary"
+        style={{ width: "3.5rem" }}
+      >
+        <NavItemList className="nav-list w-100 h-50 d-flex flex-column align-items-center justify-content-around" />
+        <SocialWebBox />
       </nav>
-      <nav className="app-pill-nav d-md-none ">
-        <NavItemList />
+      <nav
+        className="app-pill-nav d-md-none text-white bg-primary"
+        style={{ height: "3.5rem", fontSize: "1.4rem" }}
+      >
+        <NavItemList className="nav-list w-100 h-100 d-flex flex-row align-items-center justify-content-around" />
       </nav>
     </>
   );
 };
 
-const NavItemList: React.FC = () => {
-  const [isExpanded, setIsExpanded] = useState(true);
+interface NavItemListProps {
+  className?: string;
+}
+const NavItemList: React.FC<NavItemListProps> = ({ className }) => {
   return (
-    <>
-      <div
-        className="nav-list p-2 w-100 h-50 d-flex flex-column justify-content-around align-items-center position-relative"
-        style={{ width: "3.5rem" }}
+    <div className={className}>
+      <Link to="/">
+        <Home key="home" className="cursor-pointer" />
+      </Link>
+      <Link to="/library">
+        <Zap key="library" className="cursor-pointer" />
+      </Link>
+      <Link to="/code-play">
+        <Info key="Info" className="cursor-pointer" />
+      </Link>
+    </div>
+  );
+};
+
+const SocialWebBox: React.FC = () => {
+  return (
+    <div className="social-list h-25 p-2 w-100 d-flex flex-column align-items-center justify-content-around">
+      <a
+        href="https://github.com/ramHruday"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        {isExpanded ? (
-          <>
-            <Link to="/">
-              <Home />
-            </Link>
-            <Link to="/library">
-              <Zap />
-            </Link>
-            <Link to="/code-play">
-              <Info />
-            </Link>
-          </>
-        ) : (
-          <>
-            <Link to="/">Home</Link>
-            <Link to="/library">Skills</Link>
-            <Link to="/code-play">About me</Link>
-          </>
-        )}
-      </div>
-      <div className="social-list d-flex p-2 w-100  h-25 d-flex flex-column justify-content-around align-items-center">
-        <a
-          href="https://github.com/ramHruday"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="my-2"
-        >
-          <GitHub />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/rama-hrudayb/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="my-2"
-        >
-          <Linkedin />
-        </a>
-        {isExpanded ? (
-          <ChevronsLeft onClick={() => setIsExpanded(!isExpanded)} />
-        ) : (
-          <ChevronsRight onClick={() => setIsExpanded(!isExpanded)} />
-        )}
-      </div>
-    </>
+        <GitHub />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/rama-hrudayb/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Linkedin />
+      </a>
+    </div>
   );
 };
 
