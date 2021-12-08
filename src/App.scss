@@ -1,6 +1,13 @@
+body {
+  --color-background: #fafafa;
+  --color-foreground: #1f2023;
 
-
-.wrapper{
+  @media (prefers-color-scheme: dark) {
+    --color-background: #1f2023;
+    --color-foreground: #efefef;
+  }
+}
+.wrapper {
   height: 100vh !important;
 }
 
@@ -14,4 +21,3 @@
 a {
   color: white !important;
 }
-

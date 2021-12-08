@@ -7,7 +7,7 @@ const SideNavBar: React.FC = () => {
   return (
     <>
       <nav
-        className="app-nav d-none d-md-flex flex-column justify-content-between text-white bg-primary"
+        className="app-nav d-none d-md-flex flex-column justify-content-between text-white bg-dark"
         style={{ width: "3.5rem" }}
       >
         <NavItemList className="nav-list w-100 h-50 d-flex flex-column align-items-center justify-content-around" />
@@ -35,7 +35,7 @@ const NavItemList: React.FC<NavItemListProps> = ({ className }) => {
       <Link to="/library">
         <Zap key="library" className="cursor-pointer" />
       </Link>
-      <Link to="/code-play">
+      <Link to="/about-me">
         <Info key="Info" className="cursor-pointer" />
       </Link>
     </div>
