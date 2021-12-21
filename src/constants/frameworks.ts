@@ -1,4 +1,4 @@
-import { IFrameworks } from "../models/frameworks";
+import { IFrameworks } from "../models";
 
 export const FRAMEWORKS: IFrameworks[] = [
   {
