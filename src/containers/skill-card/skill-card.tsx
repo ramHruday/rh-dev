@@ -1,7 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import "./skill-card.scss";
-
 interface ISkillCardprops {
   skill: string;
   imageSrc: string;
@@ -9,14 +8,16 @@ interface ISkillCardprops {
 
 const SkillCard: React.FC<ISkillCardprops> = (props) => {
   const card = props;
+  console.log(card.imageSrc);
   return (
-    <Card className="deck-card m-2 border-0">
+    <Card className="deck-card border-0 bg-white">
       {card.imageSrc ? (
         <Card.Img
           variant="top"
-          src={card.imageSrc}
+          className="px-2 py-1 m-auto"
+          src={require(`./../../assets${card.imageSrc}`)}
           alt={card.skill}
-          style={{ height: "5rem" }}
+          style={{ width: "5.5rem", height: "4.5rem" }}
         />
       ) : null}
       <Card.Body className="bg-white px-2 py-0">

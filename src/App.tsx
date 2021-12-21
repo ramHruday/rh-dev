@@ -12,7 +12,7 @@ const App: React.FC = () => {
       <div className="d-flex h-100">
         <SideNavBar />
         {/* <Logo /> */}
-        <div className="p-3 w-100">
+        <div className="p-3 w-100 overflow-auto">
           <Switch>
             <Route path="/about-me">
               <Aboutme />

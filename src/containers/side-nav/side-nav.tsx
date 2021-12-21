@@ -1,13 +1,13 @@
 import React from "react";
 import { GitHub, Home, Info, Linkedin, Zap } from "react-feather";
-import { Link } from "react-router-dom";
+import OverlayLink from "../../components/overlay-link/overlay-link";
 import "./side-nav.scss";
 
 const SideNavBar: React.FC = () => {
   return (
-    <>
+    <div className="postion-relative">
       <nav
-        className="app-nav d-none d-md-flex flex-column justify-content-between text-white bg-dark"
+        className="app-nav d-none d-md-flex flex-column justify-content-between text-white bg-dark position-sticky h-100"
         style={{ width: "3.5rem" }}
       >
         <NavItemList className="nav-list w-100 h-50 d-flex flex-column align-items-center justify-content-around" />
@@ -19,7 +19,7 @@ const SideNavBar: React.FC = () => {
       >
         <NavItemList className="nav-list w-100 h-100 d-flex flex-row align-items-center justify-content-around" />
       </nav>
-    </>
+    </div>
   );
 };
 
@@ -29,15 +29,15 @@ interface NavItemListProps {
 const NavItemList: React.FC<NavItemListProps> = ({ className }) => {
   return (
     <div className={className}>
-      <Link to="/">
+      <OverlayLink placement="right" msg="Home" to="/">
         <Home key="home" className="cursor-pointer" />
-      </Link>
-      <Link to="/library">
+      </OverlayLink>
+      <OverlayLink placement="right" msg="Skills" to="/library">
         <Zap key="library" className="cursor-pointer" />
-      </Link>
-      <Link to="/about-me">
+      </OverlayLink>
+      <OverlayLink placement="right" msg="About Me" to="/about-me">
         <Info key="Info" className="cursor-pointer" />
-      </Link>
+      </OverlayLink>
     </div>
   );
 };
