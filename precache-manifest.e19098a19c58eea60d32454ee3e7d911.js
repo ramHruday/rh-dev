@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0b05d8c52d99d48fcad5f82bdb0bcc56",
+    "revision": "0f65c5c04734317653786047d3072206",
     "url": "/rh-dev/index.html"
   },
   {
-    "revision": "90719b45babc935f92ab",
-    "url": "/rh-dev/static/css/main.515782a4.chunk.css"
+    "revision": "7149170b4d7647534786",
+    "url": "/rh-dev/static/css/main.c2432f4e.chunk.css"
   },
   {
-    "revision": "f3db525fc1162eb841d2",
-    "url": "/rh-dev/static/js/2.3603c469.chunk.js"
+    "revision": "c8406fc7101ffc0927c5",
+    "url": "/rh-dev/static/js/2.d8cc10d8.chunk.js"
   },
   {
     "revision": "7883f2b874e072300f06317528632cc4",
-    "url": "/rh-dev/static/js/2.3603c469.chunk.js.LICENSE"
+    "url": "/rh-dev/static/js/2.d8cc10d8.chunk.js.LICENSE"
   },
   {
-    "revision": "90719b45babc935f92ab",
-    "url": "/rh-dev/static/js/main.6c7618a5.chunk.js"
+    "revision": "7149170b4d7647534786",
+    "url": "/rh-dev/static/js/main.beb1ad89.chunk.js"
   },
   {
     "revision": "7b9b1030463d915155b8",
     "url": "/rh-dev/static/js/runtime-main.85f65373.js"
+  },
+  {
+    "revision": "f9b4fd36b672d2c3be46f1821cf18f77",
+    "url": "/rh-dev/static/media/106_734_c0842316-865a-4d26-bb0f-d35bb5bf8e14-2cc2b4be-7f61-4349-b3af-977033c85dc8.f9b4fd36.mp4"
   },
   {
     "revision": "7874441d11da17c192ea2cda74684c74",
@@ -56,6 +60,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rh-dev/static/media/javascript.5fdd8c36.jpg"
   },
   {
+    "revision": "68ab895d1a8c42cfdb798349d8b5e7d5",
+    "url": "/rh-dev/static/media/night.68ab895d.gif"
+  },
+  {
     "revision": "50156c71fb2cf47d5cfe134231975922",
     "url": "/rh-dev/static/media/postgre.50156c71.png"
   },
@@ -68,8 +76,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rh-dev/static/media/r.5ee31c55.png"
   },
   {
+    "revision": "17a6760f1e38a4e4acd3fdcd8eaee48e",
+    "url": "/rh-dev/static/media/rc.17a6760f.gif"
+  },
+  {
+    "revision": "72db1f56c73ff68c906d405ad34eff0b",
+    "url": "/rh-dev/static/media/rc1.72db1f56.gif"
+  },
+  {
     "revision": "580ffd26ccaa16481ed87c1829c74943",
     "url": "/rh-dev/static/media/react.580ffd26.png"
+  },
+  {
+    "revision": "72db1f56c73ff68c906d405ad34eff0b",
+    "url": "/rh-dev/static/media/rocket.72db1f56.gif"
   },
   {
     "revision": "0881daccb5178410b18a1a36984da095",
