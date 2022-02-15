@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { DARK_THEME, LIGHT_THEME, Theme } from "../models";
+import { DARK_THEME, LIGHT_THEME, Theme } from "../skill-page/models";
 
 export interface ThemeContextState {
   toggleTheme: () => void;

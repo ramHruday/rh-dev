@@ -8,7 +8,6 @@ interface ISkillCardprops {
 
 const SkillCard: React.FC<ISkillCardprops> = (props) => {
   const card = props;
-  console.log(card.imageSrc);
   return (
     <Card className="deck-card border-0 bg-white">
       {card.imageSrc ? (

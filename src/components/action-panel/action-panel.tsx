@@ -1,11 +1,9 @@
-import React from 'react';
-
-import './action-panel.scss';
-
-import BookmarkButton from '../../components/bookmark-button/bookmark-button';
-import CommentButton from '../../components/comment-button/comment-button';
-import LikeButton from '../../components/like-button/like-button';
-import ShareButton from '../../components/share-button/share-button';
+import React from "react";
+import BookmarkButton from "../bookmark-button/bookmark-button";
+import CommentButton from "../comment-button/comment-button";
+import LikeButton from "../like-button/like-button";
+import ShareButton from "../share-button/share-button";
+import "./action-panel.scss";
 
 interface IActionPanelprops {
   key: string;
@@ -13,7 +11,7 @@ interface IActionPanelprops {
   isBookmarked: boolean;
 }
 
-const ActionPanel: React.FC<IActionPanelprops> = props => {
+const ActionPanel: React.FC<IActionPanelprops> = (props) => {
   return (
     <div className="d-inline-flex action-panel p-2 justify-content-between">
       <ShareButton id={props.key} />

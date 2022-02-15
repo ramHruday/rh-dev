@@ -1,11 +1,11 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
+import Aboutme from "./about-me-page/about-me/about-me";
 import "./App.scss";
 import SideNavBar from "./containers/side-nav/side-nav";
 import { ThemeContextProvider } from "./contexts";
-import Aboutme from "./module/about-me/about-me";
-import Home from "./module/home/home";
-import SkillLibrary from "./module/skill-library/skill-library";
+import Home from "./home-page/home/home";
+import SkillLibrary from "./skill-page/skill-library/skill-library";
 
 const App: React.FC = () => {
   return (
@@ -14,7 +14,7 @@ const App: React.FC = () => {
         <div className="d-flex h-100">
           <SideNavBar />
           {/* <Logo /> */}
-          <div className="p-3 w-100 overflow-auto">
+          <div className="p-0 w-100 overflow-auto">
             <Switch>
               <Route path="/about-me">
                 <Aboutme />

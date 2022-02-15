@@ -14,7 +14,7 @@ const SideNavBar: React.FC = () => {
         <SocialWebBox />
       </nav>
       <nav
-        className="app-pill-nav d-md-none text-white bg-primary"
+        className="app-pill-nav d-md-none text-white bg-dark"
         style={{ height: "3.5rem", fontSize: "1.4rem" }}
       >
         <NavItemList className="nav-list w-100 h-100 d-flex flex-row align-items-center justify-content-around" />

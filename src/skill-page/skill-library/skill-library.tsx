@@ -1,10 +1,10 @@
 import React from "react";
 import { Row } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
-import { FRAMEWORKS } from "../../constants/frameworks";
-import { OTHER_SKILLS } from "../../constants/misc";
-import { SKILLS } from "../../constants/skills";
-import SkillCard from "../../containers/skill-card/skill-card";
+import { FRAMEWORKS } from "../constants/frameworks";
+import { OTHER_SKILLS } from "../constants/misc";
+import { SKILLS } from "../constants/skills";
+import SkillCard from "../skill-card/skill-card";
 
 const SkillLibrary: React.FC = () => {
   return (
