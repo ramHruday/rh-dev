@@ -12,9 +12,9 @@ const App: React.FC = () => {
     <ThemeContextProvider>
       <div className="wrapper">
         <div className="d-flex h-100">
-          <SideNavBar />
+          <SideNavBar width="4rem" />
           {/* <Logo /> */}
-          <div className="p-0 w-100 overflow-auto">
+          <div className="p-0 w-100">
             <Switch>
               <Route path="/about-me">
                 <Aboutme />

@@ -19,7 +19,12 @@ const OverlayLink: React.FC<IOverlayLinkProps> = ({
       placement={placement}
       overlay={<Tooltip id={`tooltip-${placement}-${msg}`}>{msg}</Tooltip>}
     >
-      <Link {...link}>{children}</Link>
+      <Link {...link} className="monty text-center text-decoration-none">
+        {children}
+        <p className="mb-0 font-monospace">
+          <small>{msg}</small>
+        </p>
+      </Link>
     </OverlayTrigger>
   );
 };

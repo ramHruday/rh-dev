@@ -8,19 +8,24 @@ $gray: #757575;
 $link-grey: #797979;
 $light-gray: #b4b4b4;
 $bg-grey: #eef2f7;
+$neu-col: #e0e0e0;
 
 // button color overrides
-$primary: blue;
+$primary: #0747a6;
 $danger: #a52727;
 $primary-btn-gradient: linear-gradient(180deg, #0b79d8 0%, #0f5dac 100%);
 $danger-btn-gradient: linear-gradient(180deg, #ed5353 0%, #a52727 100%);
 $danger-btn-border: 1px solid #e93f3f;
+$success: #006644;
+$info: #f4f5f7;
 
 $colors: (
   "gray": $light-gray,
   "gray-dark": $gray,
   "primary": #159bfd,
   "day": #1f2023,
+  "success": $success,
+  "info": $info,
 );
 
 $body-bg: #efefef;
