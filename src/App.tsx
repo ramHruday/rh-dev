@@ -1,10 +1,11 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Container, Row } from "react-bootstrap";
 import Aboutme from "./about-me-page/about-me/about-me";
 import "./App.scss";
 import SideNavBar from "./containers/side-nav/side-nav";
 import { ThemeContextProvider } from "./contexts";
 import Home from "./home-page/home/home";
+import ProjectSection from "./my-project-page/project-page/project-page";
 import SkillLibrary from "./skill-page/skill-library/skill-library";
 
 const App: React.FC = () => {
@@ -15,18 +16,14 @@ const App: React.FC = () => {
           <SideNavBar width="4rem" />
           {/* <Logo /> */}
           <div className="p-0 w-100">
-            <Switch>
-              <Route path="/about-me">
-                <Aboutme />
-              </Route>
-
-              <Route path="/library">
-                <SkillLibrary />
-              </Route>
-              <Route path="/">
+            <Container fluid className="h-100">
+              <Row>
                 <Home />
-              </Route>
-            </Switch>
+                <ProjectSection />
+                <SkillLibrary />
+                <Aboutme />
+              </Row>
+            </Container>
           </div>
         </div>
       </div>

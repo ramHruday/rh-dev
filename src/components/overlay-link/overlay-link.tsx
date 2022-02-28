@@ -21,7 +21,7 @@ const OverlayLink: React.FC<IOverlayLinkProps> = ({
     >
       <Link {...link} className="monty text-center text-decoration-none">
         {children}
-        <p className="mb-0 font-monospace">
+        <p className="mb-0 font-monospace f-90">
           <small>{msg}</small>
         </p>
       </Link>
