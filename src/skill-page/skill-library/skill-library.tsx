@@ -1,15 +1,24 @@
 import React from "react";
 import { Row } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
+import { Link } from "react-feather";
+import { NavHashLink } from "react-router-hash-link";
 import { FRAMEWORKS } from "../constants/frameworks";
 import { OTHER_SKILLS } from "../constants/misc";
 import { SKILLS } from "../constants/skills";
 import SkillCard from "../skill-card/skill-card";
-
-const SkillLibrary: React.FC = () => {
+interface ISkillLibraryprops {
+  id?: string;
+}
+const SkillLibrary: React.FC<ISkillLibraryprops> = (props) => {
   return (
-    <Col sm="12" className="pt-3 pb-5 ">
-      <h1 className="display-5 p-2 monty">My Skillset</h1>
+    <Col sm="12" className="pt-3 pb-5 " id={props.id}>
+      <NavHashLink smooth to="#library" className="text-decoration-none">
+        <h1 className="display-5 p-2 monty text-dark ">
+          My Skillset
+          <Link className="px-1" />
+        </h1>
+      </NavHashLink>
       <Row className="p-5">
         <Col sm="12" md="9" className="pb-5">
           <h1 className="monty">Languages</h1>

@@ -2,10 +2,12 @@ import React from "react";
 import { Col } from "react-bootstrap";
 import uc from "../../assets/uc-impro.gif";
 import "./about-me.scss";
-
-const Aboutme: React.FC = () => {
+interface IAboutmeprops {
+  id?: string;
+}
+const Aboutme: React.FC<IAboutmeprops> = (props) => {
   return (
-    <Col sm="12" className="pt-3 pb-5 ">
+    <Col sm="12" className="pt-3 pb-5 " id={props.id}>
       <h1 className="display-5  monty">About me</h1>
 
       <Col sm="12" className="section">

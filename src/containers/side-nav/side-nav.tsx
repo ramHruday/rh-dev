@@ -35,16 +35,16 @@ interface NavItemListProps {
 const NavItemList: React.FC<NavItemListProps> = ({ className }) => {
   return (
     <div className={className}>
-      <OverlayLink placement="right" msg="Home" to="/">
+      <OverlayLink placement="right" msg="Home" to="#home">
         <Home key="home" className="cursor-pointer" />
       </OverlayLink>
-      <OverlayLink placement="right" msg="Projects" to="/projects">
+      <OverlayLink placement="right" msg="Projects" to="#projects">
         <Package key="projects" className="cursor-pointer" />
       </OverlayLink>
-      <OverlayLink placement="right" msg="Skills" to="/library">
+      <OverlayLink placement="right" msg="Skills" to="#library">
         <Zap key="library" className="cursor-pointer" />
       </OverlayLink>
-      <OverlayLink placement="right" msg="About" to="/about-me">
+      <OverlayLink placement="right" msg="About" to="#about-me">
         <Info key="Info" className="cursor-pointer" />
       </OverlayLink>
     </div>

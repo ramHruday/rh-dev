@@ -18,10 +18,10 @@ const App: React.FC = () => {
           <div className="p-0 w-100">
             <Container fluid className="h-100">
               <Row>
-                <Home />
-                <ProjectSection />
-                <SkillLibrary />
-                <Aboutme />
+                <Home id="home" />
+                <ProjectSection id="projects" />
+                <SkillLibrary id="library" />
+                <Aboutme id="about-me" />
               </Row>
             </Container>
           </div>

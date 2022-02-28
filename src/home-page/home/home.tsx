@@ -3,9 +3,12 @@ import { Col, Image } from "react-bootstrap";
 import uc from "../../assets/calvin.png";
 import "./home.scss";
 
-const Home: React.FC = () => {
+interface IHomeprops {
+  id?: string;
+}
+const Home: React.FC<IHomeprops> = (props) => {
   return (
-    <Col sm="12" md="10" style={{ height: "85vh" }}>
+    <Col sm="12" md="10" style={{ height: "85vh" }} id={props.id}>
       <h1 className="display-5 p-2 monty">Hello, This is Hruday.</h1>
       <h4 className="p-1 monty mb-0">
         I am a Grad student at Texas tech University.
