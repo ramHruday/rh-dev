@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import { Badge, Button } from "react-bootstrap";
 import { ExternalLink } from "react-feather";
 import { IProjects } from "../constants/projects";
 import "./project-card.scss";
@@ -10,8 +10,17 @@ const ProjectCard: React.FC<IProjects> = (props) => {
       <div className="monty font-weight-bold">{props.label}</div>
       {/* <div.Img src={props.img} /> */}
 
-      <div className="h-50 pt-2">{props.desc}</div>
-      <div className="d-flex justify-content-end">
+      <div className="h-50 pt-2">
+        {props.desc}
+        <p className="pt-2">
+          {props.tags?.map((t) => (
+            <Badge bg="secondary" pill className="mx-1 small neu-pill-grey">
+              {t}
+            </Badge>
+          ))}
+        </p>
+      </div>
+      <div className="d-flex justify-content-end pt-2">
         {props.githubUrl ? (
           <Button
             variant="info"

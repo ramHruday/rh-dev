@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Row } from "react-bootstrap";
+import { Badge, Col, Container, Row } from "react-bootstrap";
+import { Heart } from "react-feather";
 import Aboutme from "./about-me-page/about-me/about-me";
 import "./App.scss";
 import SideNavBar from "./containers/side-nav/side-nav";
@@ -22,6 +23,18 @@ const App: React.FC = () => {
                 <ProjectSection id="projects" />
                 <SkillLibrary id="library" />
                 <Aboutme id="about-me" />
+              </Row>
+              <Row className="justify-content-center">
+                <Col>
+                  <Badge bg="none" text="dark" className="mb-3">
+                    Inspired by
+                    <Heart
+                      color="#eb2f96"
+                      className="heartbeat neu-div p-2 mx-1"
+                    />
+                    Neumorphism
+                  </Badge>
+                </Col>
               </Row>
             </Container>
           </div>

@@ -68,7 +68,7 @@ const SocialWebBox: React.FC = () => {
         rel="noopener noreferrer"
         className="neu-black my-2 p-2"
       >
-        <Linkedin />
+        <Linkedin color="#0077b5" />
       </a>
     </div>
   );

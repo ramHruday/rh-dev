@@ -19,7 +19,7 @@ const OverlayLink: React.FC<IOverlayLinkProps> = ({
       placement={placement}
       overlay={<Tooltip id={`tooltip-${placement}-${msg}`}>{msg}</Tooltip>}
     >
-      <span className="w-100 text-center">
+      <span className="w-100 text-center hoverable-neu">
         <NavHashLink
           smooth
           to={link.to}

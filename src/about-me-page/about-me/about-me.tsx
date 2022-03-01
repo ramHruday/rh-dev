@@ -10,8 +10,13 @@ const Aboutme: React.FC<IAboutmeprops> = (props) => {
     <Col sm="12" className="pt-3 pb-5 " id={props.id}>
       <h1 className="display-5  monty">About me</h1>
 
-      <Col sm="12" className="section">
-        <img src={uc} alt="site under construction" style={{ height: 500 }} />
+      <Col sm="12" className="section text-center">
+        <img
+          src={uc}
+          alt="site under construction"
+          className=""
+          style={{ maxWidth: "100%", maxHeight: "100%" }}
+        />
       </Col>
     </Col>
   );
