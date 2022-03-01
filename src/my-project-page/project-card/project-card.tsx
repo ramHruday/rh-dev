@@ -27,6 +27,7 @@ const ProjectCard: React.FC<IProjects> = (props) => {
             className="d-flex justify-content-between text-dark mx-1"
             href={props.githubUrl}
             size="sm"
+            target="_blank"
           >
             <span className="mx-1">Github</span>
             <ExternalLink size="16px" />
@@ -37,6 +38,7 @@ const ProjectCard: React.FC<IProjects> = (props) => {
             variant="success"
             className="d-flex justify-content-between mx-1"
             href={props.url}
+            target="_blank"
             size="sm"
           >
             <span className="mx-1">Deployed at</span>
