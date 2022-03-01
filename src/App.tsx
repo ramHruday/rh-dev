@@ -14,7 +14,7 @@ const App: React.FC = () => {
     <ThemeContextProvider>
       <div className="wrapper">
         <div className="d-flex h-100">
-          <SideNavBar width="4rem" />
+          <SideNavBar width="4.2rem" />
           {/* <Logo /> */}
           <div className="p-0 w-100">
             <Container fluid className="h-100">

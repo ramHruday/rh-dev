@@ -13,7 +13,7 @@ const SideNavBar: React.FC<ISideNavbarProps> = ({ width }) => {
       <div className="position-fixed h-100" style={{ width }}>
         <nav
           className="app-nav d-none d-md-flex flex-column justify-content-between text-white bg-dark position-sticky h-100"
-          style={{ width: "4rem" }}
+          style={{ width: "4.2rem" }}
         >
           <NavItemList className="nav-list w-100 h-60 d-flex flex-column align-items-center justify-content-around" />
           <SocialWebBox />

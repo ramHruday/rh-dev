@@ -24,11 +24,11 @@ const OverlayLink: React.FC<IOverlayLinkProps> = ({
           smooth
           to={link.to}
           activeClassName="neu-grey"
-          className="monty text-decoration-none w-75 p-2 mb-0"
+          className="monty p-2 mb-0"
         >
           {children}
         </NavHashLink>
-        <p className="mb-0 font-monospace f-90">
+        <p className="mb-0 font-monospace f-90 mt-2">
           <small>{msg}</small>
         </p>
       </span>
