@@ -3,26 +3,22 @@ import { ISkills } from "../models";
 export const SKILLS: ISkills[] = [
   {
     label: "Typescript",
-    img: "/images/skills/typescript.jpg",
+    img: "/images/skills/typescript.webp",
   },
   {
     label: "Javascript",
-    img: "/images/skills/javascript.jpg",
+    img: "/images/skills/javascript.webp",
   },
   {
     label: "C++",
-    img: "/images/skills/cpp.png",
+    img: "/images/skills/cpp.webp",
   },
   {
     label: "Python",
-    img: "/images/skills/python.png",
-  },
-  {
-    label: "R",
-    img: "/images/skills/r.png",
+    img: "/images/skills/python.webp",
   },
   {
     label: "Java",
-    img: "/images/skills/java.png",
+    img: "/images/skills/java.webp",
   },
 ];

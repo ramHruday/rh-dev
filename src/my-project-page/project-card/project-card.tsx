@@ -10,7 +10,7 @@ const ProjectCard: React.FC<IProjects> = (props) => {
       <div className="monty font-weight-bold">{props.label}</div>
       {/* <div.Img src={props.img} /> */}
 
-      <div className="h-50 pt-2">
+      <div className="h-50 py-2">
         {props.desc}
         <p className="pt-2">
           {props.tags?.map((t) => (

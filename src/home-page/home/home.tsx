@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Image } from "react-bootstrap";
-import uc from "../../assets/calvin.png";
+import uc from "../../assets/calvin.webp";
 import "./home.scss";
 
 interface IHomeprops {

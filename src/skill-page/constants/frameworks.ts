@@ -3,26 +3,26 @@ import { IFrameworks } from "../models";
 export const FRAMEWORKS: IFrameworks[] = [
   {
     label: "React",
-    img: "/images/frameworks/react.png",
+    img: "/images/frameworks/react.webp",
   },
   {
     label: "Angular",
-    img: "/images/frameworks/angular.png",
+    img: "/images/frameworks/angular.webp",
   },
   {
     label: "Backbone",
-    img: "/images/frameworks/bckbone.png",
+    img: "/images/frameworks/bckbone.webp",
   },
   {
     label: "Vue",
-    img: "/images/frameworks/vue.png",
+    img: "/images/frameworks/vue.webp",
   },
   {
     label: "Flask",
-    img: "/images/frameworks/flask.png",
+    img: "/images/frameworks/flask.webp",
   },
   {
     label: "SpringBoot",
-    img: "/images/frameworks/springboot.png",
+    img: "/images/frameworks/springboot.webp",
   },
 ];
