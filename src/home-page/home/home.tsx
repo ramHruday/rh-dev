@@ -16,7 +16,7 @@ const Home: React.FC<IHomeprops> = (props) => {
       <h4 className="p-1 monty mb-0">
         Skilled in Full stack development, Internet of drones
       </h4>
-      <Image className="float-end" src={uc} />
+      <Image className="float-end calvin-img" src={uc} />
     </Col>
   );
 };

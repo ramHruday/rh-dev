@@ -15,26 +15,8 @@ const Aboutme: React.FC<IAboutmeprops> = (props) => {
           src={uc}
           alt="site under construction"
           className=""
-          style={{ maxWidth: "100%", maxHeight: "100%" }}
+          style={{ width: 400, height: "auto" }}
         />
-      </Col>
-      <Col>
-        <div
-          className="badge-base LI-profile-badge"
-          data-locale="en_US"
-          data-size="medium"
-          data-theme="light"
-          data-type="HORIZONTAL"
-          data-vanity="rama-hrudayb"
-          data-version="v1"
-        >
-          <a
-            className="badge-base__link LI-simple-link"
-            href="https://www.linkedin.com/in/rama-hrudayb?trk=profile-badge"
-          >
-            R Hruday B
-          </a>
-        </div>
       </Col>
     </Col>
   );

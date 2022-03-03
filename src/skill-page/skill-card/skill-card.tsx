@@ -9,21 +9,17 @@ interface ISkillCardprops {
 const SkillCard: React.FC<ISkillCardprops> = (props) => {
   const card = props;
   return (
-    <Card className="deck-card border-0 bg-white">
+    <Card className="deck-card border-0 bg-neu-white p-2">
       {card.imageSrc ? (
         <Card.Img
           variant="top"
-          className="px-2 py-1 m-auto"
+          className="p-2 m-auto overflow-hidden"
           src={require(`./../../assets${card.imageSrc}`)}
           alt={card.skill}
-          style={{ width: "5.5rem", height: "4.5rem" }}
+          style={{ width: "auto", height: "4.5rem", maxWidth: "100%" }}
         />
       ) : null}
-      <Card.Body className="bg-white px-2 py-0">
-        <Card.Title as="h3" className="p-2 text-overflow-ellipsis w-100">
-          {card.skill}
-        </Card.Title>
-      </Card.Body>
+      <p className="text-center">{card.skill}</p>
     </Card>
   );
 };

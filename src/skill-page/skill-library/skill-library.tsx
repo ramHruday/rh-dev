@@ -21,7 +21,7 @@ const SkillLibrary: React.FC<ISkillLibraryprops> = (props) => {
       </NavHashLink>
       <Row className="p-5">
         <Col sm="12" md="9" className="pb-5">
-          <h1 className="monty">Languages</h1>
+          <h1 className="monty my-4">Languages</h1>
           <Row xs={2} md={6} className="g-4">
             {SKILLS.length > 0 &&
               SKILLS.map(({ label, img }) => (
@@ -32,7 +32,7 @@ const SkillLibrary: React.FC<ISkillLibraryprops> = (props) => {
           </Row>
         </Col>
         <Col sm="12" md="9" className="pb-5">
-          <h1 className="monty">Frameworks</h1>
+          <h1 className="monty my-4">Frameworks</h1>
           <Row xs={2} md={6} className="g-4">
             {FRAMEWORKS.length > 0 &&
               FRAMEWORKS.map(({ label, img }) => (
@@ -43,7 +43,7 @@ const SkillLibrary: React.FC<ISkillLibraryprops> = (props) => {
           </Row>
         </Col>
         <Col sm="12" md="9" className="pb-5">
-          <h1 className="monty">Other skills</h1>
+          <h1 className="monty my-4">Other skills</h1>
           <Row xs={2} md={6} className="g-4">
             {OTHER_SKILLS.length > 0 &&
               OTHER_SKILLS.map(({ label, img }) => (
