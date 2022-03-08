@@ -15,7 +15,7 @@ const Aboutme: React.FC<IAboutmeprops> = (props) => {
           src={uc}
           alt="site under construction"
           className=""
-          style={{ width: 400, height: "auto" }}
+          style={{ width: 400, height: "auto", maxWidth: "95%" }}
         />
       </Col>
     </Col>
