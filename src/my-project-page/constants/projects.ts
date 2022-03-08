@@ -21,7 +21,7 @@ export const Projects: IProjects[] = [
     img: "/images/frameworks/angular.webp",
     desc: "Simulation of drone movement and object detection using ROS, Gazebo, YOLO, OpenCV.",
     githubUrl: "https://github.com/ramHruday/project-drone",
-    tags: ["ROS", "Gazebo", "YOLO", "OpenCV"],
+    tags: ["ROS", "Gazebo", "YOLO", "OpenCV", "C++"],
   },
   {
     label: "Yettey",
