@@ -6,9 +6,18 @@ import "./project-card.scss";
 
 const ProjectCard: React.FC<IProjects> = (props) => {
   return (
-    <div className="mx-2 my-4 action-panel bg-apple-grey px-3 pt-4 pb-0">
+    <div className="mx-2 my-4 action-panel bg-apple-grey px-3 pt-4 pb-2">
       <div className="monty font-weight-bold">{props.label}</div>
-      {/* <div.Img src={props.img} /> */}
+      {props.img ? (
+        <a href={props.url} target="_blank" rel="noopener noreferrer">
+          <img
+            className="p-2 m-auto overflow-hidden"
+            src={require(`./../../assets${props.img}`)}
+            alt={props.label}
+            style={{ width: "100%", height: 300, overflow: "hidden" }}
+          />
+        </a>
+      ) : null}
 
       <div className="h-50 py-2">
         {props.desc}

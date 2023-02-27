@@ -25,7 +25,7 @@ const ProjectSection: React.FC<IProjectSectionprops> = (props) => {
       </NavHashLink>
       <Row className="justify-content-end">
         {Projects.map((p) => (
-          <Col sm="12" md="5">
+          <Col sm="12" md="6">
             <ProjectCard {...p} />
           </Col>
         ))}

@@ -1,7 +1,6 @@
 import React from "react";
 import { Badge, Col, Container, Row } from "react-bootstrap";
 import { Heart } from "react-feather";
-import Aboutme from "./about-me-page/about-me/about-me";
 import "./App.scss";
 import SideNavBar from "./containers/side-nav/side-nav";
 import { ThemeContextProvider } from "./contexts";
@@ -22,7 +21,7 @@ const App: React.FC = () => {
                 <Home id="home" />
                 <ProjectSection id="projects" />
                 <SkillLibrary id="library" />
-                <Aboutme id="about-me" />
+                {/* <Aboutme id="about-me" /> */}
               </Row>
               <Row className="justify-content-center">
                 <Col>

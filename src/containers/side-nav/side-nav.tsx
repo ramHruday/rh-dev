@@ -1,5 +1,5 @@
 import React from "react";
-import { GitHub, Home, Info, Linkedin, Package, Zap } from "react-feather";
+import { GitHub, Home, Linkedin, Package, Zap } from "react-feather";
 import OverlayLink from "../../components/overlay-link/overlay-link";
 import "./side-nav.scss";
 
@@ -44,9 +44,9 @@ const NavItemList: React.FC<NavItemListProps> = ({ className }) => {
       <OverlayLink placement="right" msg="Skills" to="#library">
         <Zap key="library" className="cursor-pointer" />
       </OverlayLink>
-      <OverlayLink placement="right" msg="About" to="#about-me">
+      {/* <OverlayLink placement="right" msg="About" to="#about-me">
         <Info key="Info" className="cursor-pointer" />
-      </OverlayLink>
+      </OverlayLink> */}
     </div>
   );
 };
