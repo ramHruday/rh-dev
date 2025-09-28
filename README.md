@@ -1,18 +1,36 @@
 # React DEV
 
-- Share Code , snippets, algos, hacks, compnents in close knit groups
-- Google SSO
+## Getting Started
 
-## Goals
- 
-- My skills and their references
-- About me
-- Projects and Github links
+To get this project up and running on your local machine, follow these steps:
 
+### Prerequisites
 
-## Project Structure
+Make sure you have the following installed:
 
-- components should be like input/output
-- modules should drive the logic and house the components
-- components cannot use other components , use containers for using components
-- SOLID principles to be followed
+*   [Node.js](https://nodejs.org/en/) (LTS version recommended)
+*   [Yarn](https://classic.yarnpkg.com/en/docs/install/) (or npm, but Yarn is used in this project)
+
+### Installation
+
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/ramHruday/rh-dev.git
+    cd rh-dev
+    ```
+2.  Install dependencies:
+    ```bash
+    yarn install
+    # or npm install
+    ```
+
+### Running the Project
+
+To start the development server:
+
+```bash
+yarn start
+# or npm start
+```
+
+This will open the application in your browser at `http://localhost:3000` (or another available port).
