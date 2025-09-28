@@ -20,8 +20,7 @@ Make sure you have the following installed:
     ```
 2.  Install dependencies:
     ```bash
-    yarn install
-    # or npm install
+    yarn
     ```
 
 ### Running the Project
@@ -29,8 +28,7 @@ Make sure you have the following installed:
 To start the development server:
 
 ```bash
-yarn start
-# or npm start
+yarn run start
 ```
 
 This will open the application in your browser at `http://localhost:3000` (or another available port).
