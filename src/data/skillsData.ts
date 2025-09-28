@@ -23,14 +23,15 @@ export const skillsData: SkillCategory[] = [
     skills: [
       { name: "React", iconUrl: "/images/frameworks/react.webp" },
       { name: "Angular", iconUrl: "/images/frameworks/angular.webp" },
-      { name: "Node.js", iconUrl: "/images/frameworks/nodejs.webp" },
+      { name: "Spark", iconUrl: "/images/others/spark.png" },
+      { name: "Table Format", iconUrl: "/images/others/openfil.webp" },
     ],
   },
   {
     category: "Tools & Platforms",
     skills: [
-      { name: "Docker", iconUrl: "/images/others/docker.webp" },
-      { name: "AWS", iconUrl: "/images/others/aws.webp" },
+      { name: "Docker", iconUrl: "/images/others/docker.svg" },
+      { name: "Azure", iconUrl: "/images/others/azure.svg" },
       { name: "Firebase", iconUrl: "/images/others/firebase.webp" },
       { name: "MongoDB", iconUrl: "/images/others/mongo.webp" },
       { name: "PostgreSQL", iconUrl: "/images/others/postgre.webp" },
