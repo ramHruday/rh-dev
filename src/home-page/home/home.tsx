@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Image } from "react-bootstrap";
+import { Col, Image, Button, Row } from "react-bootstrap";
 import uc from "../../assets/calvin.webp";
 import "./home.scss";
 
@@ -8,15 +8,22 @@ interface IHomeprops {
 }
 const Home: React.FC<IHomeprops> = (props) => {
   return (
-    <Col sm="12" md="10" style={{ height: "85vh" }} id={props.id}>
-      <h1 className="display-5 p-2 monty">Hello, This is Hruday.</h1>
-      <h4 className="p-1 monty mb-0">
-        I am a Grad student at Texas tech University.
-      </h4>
-      <h4 className="p-1 monty mb-0">
-        Skilled in Full stack development, Internet of drones
-      </h4>
-      <Image className="float-end calvin-img" src={uc} />
+    <Col sm="12" md="10" className="home-section d-flex align-items-center justify-content-center" id={props.id}>
+      <div className="home-content neumorphic-debossed p-4 p-md-5 d-flex flex-column flex-md-row align-items-center justify-content-between w-100">
+        <div className="text-content text-center text-md-start mb-4 mb-md-0">
+          <h1 className="display-4 monty fw-bold">Hi, I'm Hruday.</h1>
+          <h3 className="monty text-muted mb-4">A Passionate Full-stack Developer & Innovator.</h3>
+          <p className="lead mb-4">
+            Building seamless web experiences and exploring the future of IoT with drones.
+          </p>
+          <Button variant="primary" className="neumorphic-embossed-button px-4 py-2" href="#projects">
+            View My Work
+          </Button>
+        </div>
+        <div className="image-content mt-4 mt-md-0 ms-md-5">
+          <Image src={uc} alt="Hruday" fluid roundedCircle className="profile-image neumorphic-embossed" />
+        </div>
+      </div>
     </Col>
   );
 };

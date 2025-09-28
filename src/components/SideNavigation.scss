@@ -1,0 +1,59 @@
+@import "../_neumorphism.scss";
+
+.side-navigation-container {
+  top: 0;
+  left: 0;
+  width: 5rem; // Fixed width for the side navigation
+  background-color: var(--color-background);
+  padding: 1rem 0.5rem;
+  z-index: 1000; // Ensure it's above other content
+  border-right: 1px solid rgba(0, 0, 0, 0.1); // Subtle separator
+  @include neumorphic-debossed(10px); // Debossed effect for the overall nav
+
+  .nav-links,
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .nav-item,
+    a {
+      @include neumorphic-embossed(6px); // Embossed effect for nav items and social links
+      border: none;
+      background-color: var(--color-background);
+      color: var(--color-foreground);
+      border-radius: 50%; // Circular shape for icons
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 3.5rem;
+      height: 3.5rem;
+
+      &:hover {
+        @include neumorphic-debossed(6px); // Debossed effect on hover
+        color: var(--color-primary); // Highlight color on hover
+      }
+      &.active {
+        @include neumorphic-debossed(6px); // Debossed effect for active state
+        color: var(--color-primary); // Highlight color for active state
+      }
+      svg {
+        color: var(--color-foreground);
+        transition: all 0.3s ease;
+      }
+      &:hover svg,
+      &.active svg {
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  .nav-links {
+    margin-top: 2rem;
+  }
+
+  .social-links {
+    margin-bottom: 1rem;
+  }
+}

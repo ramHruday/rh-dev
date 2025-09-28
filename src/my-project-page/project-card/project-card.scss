@@ -1,15 +1,44 @@
-.section {
-  font-size: 4rem;
-}
+@import "../../_neumorphism.scss";
 
 .action-panel {
-  border-radius: 30px;
-  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
-  // min-height: 250px;
-}
+  @include neumorphic-embossed(8px); // Softer emboss for the card container
+  margin-bottom: 1.5rem;
+  border: none;
 
-.neu-pill-grey {
-  border-radius: 2px;
-  background: #e0e0e0;
-  box-shadow: 3px 3px 5px #b3b3b3, -3px -3px 5px #ffffff;
+  &:hover {
+    @include neumorphic-debossed(8px); // Softer debossed effect on hover
+  }
+
+  .project-image {
+    border-radius: 8px; // Slightly rounded corners for the image
+    @include neumorphic-debossed(3px); // Subtle debossed effect for the image
+    margin-bottom: 1rem;
+  }
+
+  .project-tag {
+    @include neumorphic-flat-pressed(1px);
+    border: none;
+    color: var(--color-foreground);
+    background-color: var(--color-background);
+    &:hover {
+      @include neumorphic-embossed(1px);
+    }
+  }
+
+  .project-button {
+    @include neumorphic-embossed(3px);
+    border: none;
+    color: var(--color-foreground);
+    background-color: var(--color-background);
+    font-weight: 600;
+
+    &:hover {
+      color: var(--color-foreground);
+      background-color: var(--color-background);
+    }
+
+    &:active {
+      @include neumorphic-debossed(3px);
+    }
+  }
 }

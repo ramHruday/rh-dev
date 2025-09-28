@@ -1,0 +1,105 @@
+@import "../_neumorphism.scss";
+
+.contact-section-container {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  padding: 4rem 0;
+
+  h2 {
+    color: var(--color-foreground);
+    .highlight {
+      color: var(--bs-primary);
+    }
+  }
+
+  .lead {
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+  }
+
+  .social-links {
+    .neumorphic-embossed-icon {
+      @include neumorphic-embossed(6px);
+      border: none;
+      background-color: var(--color-background);
+      color: var(--color-foreground);
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        @include neumorphic-debossed(6px);
+        color: var(--bs-primary); // Highlight icon on hover
+      }
+      &:active {
+        @include neumorphic-debossed(6px);
+      }
+      svg {
+        color: var(--color-foreground);
+        transition: all 0.3s ease;
+      }
+      &:hover svg {
+        color: var(--bs-primary);
+      }
+    }
+  }
+
+  .contact-form {
+    @include neumorphic-debossed(10px); // Debossed effect for the form container
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    padding: 2rem;
+    border-radius: 15px;
+
+    h3 {
+      color: var(--color-foreground);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+      color: var(--color-foreground);
+      font-weight: 500;
+    }
+
+    .neumorphic-input {
+      @include neumorphic-debossed(4px); // Inset effect for input fields
+      border: none;
+      background-color: var(--color-background);
+      color: var(--color-foreground);
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+
+      &:focus {
+        outline: none;
+        box-shadow: inset 2px 2px 5px var(--neumorphic-shadow-dark), inset -2px -2px 5px var(--neumorphic-shadow-light);
+      }
+
+      &::placeholder {
+        color: rgba(var(--color-foreground-rgb), 0.6);
+      }
+    }
+
+    .neumorphic-embossed-button {
+      @include neumorphic-embossed(6px);
+      border: none;
+      color: var(--color-foreground);
+      background-color: var(--color-background);
+      font-weight: 600;
+      padding: 0.8rem 2.5rem;
+      font-size: 1.1rem;
+
+      &:hover {
+        color: var(--color-foreground);
+        background-color: var(--color-background);
+        @include neumorphic-debossed(6px);
+      }
+
+      &:active {
+        @include neumorphic-debossed(6px);
+      }
+    }
+  }
+}

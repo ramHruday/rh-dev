@@ -12,14 +12,14 @@ const SideNavBar: React.FC<ISideNavbarProps> = ({ width }) => {
     <div className="postion-relative d-none d-md-block" style={{ width }}>
       <div className="position-fixed h-100" style={{ width }}>
         <nav
-          className="app-nav d-none d-md-flex flex-column justify-content-between text-white bg-dark position-sticky h-100"
+          className="app-nav d-none d-md-flex flex-column justify-content-between position-sticky h-100"
           style={{ width: "4.2rem" }}
         >
           <NavItemList className="nav-list w-100 h-60 d-flex flex-column align-items-center justify-content-around" />
           <SocialWebBox />
         </nav>
         <nav
-          className="app-pill-nav d-md-none text-white bg-dark"
+          className="app-pill-nav d-md-none"
           style={{ height: "3.5rem", fontSize: "1.4rem" }}
         >
           <NavItemList className="nav-list w-100 h-100 d-flex flex-row align-items-center justify-content-around" />
@@ -33,15 +33,16 @@ interface NavItemListProps {
   className?: string;
 }
 const NavItemList: React.FC<NavItemListProps> = ({ className }) => {
+  const currentHash = window.location.hash;
   return (
     <div className={className}>
-      <OverlayLink placement="right" msg="Home" to="#home">
+      <OverlayLink placement="right" msg="Home" to="#home" className={currentHash === '#home' || currentHash === '' ? 'active' : ''}>
         <Home key="home" className="cursor-pointer" />
       </OverlayLink>
-      <OverlayLink placement="right" msg="Projects" to="#projects">
+      <OverlayLink placement="right" msg="Projects" to="#projects" className={currentHash === '#projects' ? 'active' : ''}>
         <Package key="projects" className="cursor-pointer" />
       </OverlayLink>
-      <OverlayLink placement="right" msg="Skills" to="#library">
+      <OverlayLink placement="right" msg="Skills" to="#library" className={currentHash === '#library' ? 'active' : ''}>
         <Zap key="library" className="cursor-pointer" />
       </OverlayLink>
       {/* <OverlayLink placement="right" msg="About" to="#about-me">
@@ -58,7 +59,7 @@ const SocialWebBox: React.FC = () => {
         href="https://github.com/ramHruday"
         target="_blank"
         rel="noopener noreferrer"
-        className="neu-black my-2 p-2"
+        className="my-2 p-2"
       >
         <GitHub />
       </a>
@@ -66,7 +67,7 @@ const SocialWebBox: React.FC = () => {
         href="https://www.linkedin.com/in/rama-hrudayb/"
         target="_blank"
         rel="noopener noreferrer"
-        className="neu-black my-2 p-2"
+        className="my-2 p-2"
       >
         <Linkedin color="#0077b5" />
       </a>

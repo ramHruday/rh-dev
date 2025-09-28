@@ -1,0 +1,30 @@
+@import "../_neumorphism.scss";
+
+.theme-toggle-button {
+  @include neumorphic-embossed(6px); // Embossed effect for the button
+  border: none;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  border-radius: 50%; // Circular shape
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+
+  &:hover {
+    @include neumorphic-debossed(6px); // Debossed effect on hover
+    color: var(--color-primary); // Highlight color on hover
+  }
+  &:active {
+    @include neumorphic-debossed(6px);
+  }
+  svg {
+    color: var(--color-foreground);
+    transition: all 0.3s ease;
+  }
+  &:hover svg {
+    color: var(--color-primary);
+  }
+}

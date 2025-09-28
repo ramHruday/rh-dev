@@ -1,0 +1,56 @@
+@use "sass:math";
+
+// Base neumorphic style
+@mixin neumorphic-base($borderRadius: 10px) {
+  border-radius: $borderRadius;
+  background: var(--color-background);
+  transition: all 0.3s ease;
+}
+
+// Embossed (popped-out) effect
+@mixin neumorphic-embossed($depth: 4px) {
+  @include neumorphic-base();
+  box-shadow: 
+    math.div($depth, 1) math.div($depth, 1) math.div($depth * 2, 1) var(--neumorphic-shadow-dark),
+    math.div(-$depth, 1) math.div(-$depth, 1) math.div($depth * 2, 1) var(--neumorphic-shadow-light);
+
+  &:hover {
+    box-shadow: 
+      math.div($depth, 2) math.div($depth, 2) math.div($depth, 1) var(--neumorphic-shadow-dark),
+      math.div(-$depth, 2) math.div(-$depth, 2) math.div($depth, 1) var(--neumorphic-shadow-light);
+  }
+}
+
+// Debossed (pressed-in) effect
+@mixin neumorphic-debossed($depth: 4px) {
+  @include neumorphic-base();
+  box-shadow: 
+    inset math.div($depth, 1) math.div($depth, 1) math.div($depth * 2, 1) var(--neumorphic-shadow-dark),
+    inset math.div(-$depth, 1) math.div(-$depth, 1) math.div($depth * 2, 1) var(--neumorphic-shadow-light);
+
+  &:hover {
+    box-shadow: 
+      inset math.div($depth, 2) math.div($depth, 2) math.div($depth, 1) var(--neumorphic-shadow-dark),
+      inset math.div(-$depth, 2) math.div(-$depth, 2) math.div($depth, 1) var(--neumorphic-shadow-light);
+  }
+}
+
+// Flat style with pressed effect on active
+@mixin neumorphic-flat-pressed($depth: 1px) {
+  @include neumorphic-base();
+  box-shadow: 
+    math.div($depth, 1) math.div($depth, 1) math.div($depth * 2, 1) var(--neumorphic-shadow-dark),
+    math.div(-$depth, 1) math.div(-$depth, 1) math.div($depth * 2, 1) var(--neumorphic-shadow-light);
+
+  &:active {
+    box-shadow: 
+      inset math.div($depth, 1) math.div($depth, 1) math.div($depth * 2, 1) var(--neumorphic-shadow-dark),
+      inset math.div(-$depth, 1) math.div(-$depth, 1) math.div($depth * 2, 1) var(--neumorphic-shadow-light);
+  }
+}
+
+// Flat style without shadow
+@mixin neumorphic-flat() {
+  @include neumorphic-base();
+  box-shadow: none;
+}

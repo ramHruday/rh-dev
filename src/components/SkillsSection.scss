@@ -1,0 +1,49 @@
+@import "../_neumorphism.scss";
+
+.skills-section-container {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  padding: 4rem 0;
+
+  h2 {
+    color: var(--color-foreground);
+    .highlight {
+      color: var(--bs-primary);
+    }
+  }
+
+  .skill-category-title {
+    color: var(--color-foreground);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+
+  .skill-card {
+    @include neumorphic-embossed(6px); // Embossed effect for skill card
+    border: none;
+    transition: all 0.3s ease;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+
+    &:hover {
+      @include neumorphic-debossed(6px); // Debossed effect on hover
+    }
+
+    .skill-icon {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      filter: grayscale(100%); // Make icons grayscale by default
+      transition: filter 0.3s ease;
+
+      &:hover {
+        filter: grayscale(0%); // Colorize on hover
+      }
+    }
+
+    .card-text {
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import "../_neumorphism.scss";
+
+.hero-section-container {
+  min-height: 100vh; // Full viewport height
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+
+  .highlight {
+    color: var(--bs-primary); // Using a Bootstrap primary color for highlight
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    @media (min-width: 768px) {
+      font-size: 4.5rem;
+    }
+  }
+
+  .lead {
+    font-size: 1.25rem;
+    @media (min-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .hero-cta-button {
+    @include neumorphic-embossed(6px);
+    border: none;
+    color: var(--color-foreground);
+    background-color: var(--color-background);
+    font-weight: 600;
+    padding: 0.8rem 2.5rem;
+    font-size: 1.1rem;
+
+    &:hover {
+      color: var(--color-foreground);
+      background-color: var(--color-background);
+      @include neumorphic-debossed(6px);
+    }
+
+    &:active {
+      @include neumorphic-debossed(6px);
+    }
+  }
+}

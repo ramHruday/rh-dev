@@ -6,12 +6,12 @@ import "./project-card.scss";
 
 const ProjectCard: React.FC<IProjects> = (props) => {
   return (
-    <div className="mx-2 my-4 action-panel bg-apple-grey px-3 pt-4 pb-2">
+    <div className="mx-2 my-4 action-panel px-3 pt-4 pb-2">
       <div className="monty font-weight-bold">{props.label}</div>
       {props.img ? (
         <a href={props.url} target="_blank" rel="noopener noreferrer">
           <img
-            className="p-2 m-auto overflow-hidden"
+            className="p-2 m-auto overflow-hidden project-image"
             src={require(`./../../assets${props.img}`)}
             alt={props.label}
             style={{ width: "100%", height: 300, overflow: "hidden" }}
@@ -23,7 +23,7 @@ const ProjectCard: React.FC<IProjects> = (props) => {
         {props.desc}
         <p className="pt-2">
           {props.tags?.map((t) => (
-            <Badge bg="secondary" pill className="mx-1 small neu-pill-grey">
+            <Badge bg="secondary" pill className="mx-1 small project-tag">
               {t}
             </Badge>
           ))}
@@ -33,7 +33,7 @@ const ProjectCard: React.FC<IProjects> = (props) => {
         {props.githubUrl ? (
           <Button
             variant="info"
-            className="d-flex justify-content-between text-dark mx-1"
+            className="d-flex justify-content-between text-dark mx-1 project-button"
             href={props.githubUrl}
             size="sm"
             target="_blank"
@@ -45,7 +45,7 @@ const ProjectCard: React.FC<IProjects> = (props) => {
         {props.url ? (
           <Button
             variant="success"
-            className="d-flex justify-content-between mx-1"
+            className="d-flex justify-content-between mx-1 project-button"
             href={props.url}
             target="_blank"
             size="sm"

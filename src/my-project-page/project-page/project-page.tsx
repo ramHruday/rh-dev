@@ -14,18 +14,18 @@ const ProjectSection: React.FC<IProjectSectionprops> = (props) => {
   return (
     <Col
       sm="12"
-      className="pt-3 pb-5 justify-content-end bg-apple-grey"
+      className="project-page-container pt-3 pb-5 justify-content-end"
       id={props.id}
     >
       <NavHashLink smooth to="#projects" className="text-decoration-none">
-        <h1 className="display-5 p-2 monty text-dark ">
+        <h1 className="display-5 p-2 monty">
           Projects
           <Link className="px-1" />
         </h1>
       </NavHashLink>
-      <Row className="justify-content-end">
+      <Row className="justify-content-center">
         {Projects.map((p) => (
-          <Col sm="12" md="6">
+          <Col sm="12" md="6" lg="4" key={p.img}>
             <ProjectCard {...p} />
           </Col>
         ))}

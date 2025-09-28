@@ -12,42 +12,42 @@ interface ISkillLibraryprops {
 }
 const SkillLibrary: React.FC<ISkillLibraryprops> = (props) => {
   return (
-    <Col sm="12" className="pt-3 pb-5 " id={props.id}>
+    <Col sm="12" className="pt-3 pb-5 skill-library-container" id={props.id}>
       <NavHashLink smooth to="#library" className="text-decoration-none">
-        <h1 className="display-5 p-2 monty text-dark ">
+        <h1 className="display-5 p-2 monty skill-library-heading">
           My Skillset
           <Link className="px-1" />
         </h1>
       </NavHashLink>
       <Row className="p-5">
         <Col sm="12" md="9" className="pb-5">
-          <h1 className="monty my-4">Languages</h1>
+          <h1 className="monty my-4 skill-category-heading">Languages</h1>
           <Row xs={2} md={6} className="g-4">
             {SKILLS.length > 0 &&
               SKILLS.map(({ label, img }) => (
-                <Col>
+                <Col key={label}>
                   <SkillCard skill={label} imageSrc={img} />
                 </Col>
               ))}
           </Row>
         </Col>
         <Col sm="12" md="9" className="pb-5">
-          <h1 className="monty my-4">Frameworks</h1>
+          <h1 className="monty my-4 skill-category-heading">Frameworks</h1>
           <Row xs={2} md={6} className="g-4">
             {FRAMEWORKS.length > 0 &&
               FRAMEWORKS.map(({ label, img }) => (
-                <Col>
+                <Col key={label}>
                   <SkillCard skill={label} imageSrc={img} />
                 </Col>
               ))}
           </Row>
         </Col>
         <Col sm="12" md="9" className="pb-5">
-          <h1 className="monty my-4">Other skills</h1>
+          <h1 className="monty my-4 skill-category-heading">Other skills</h1>
           <Row xs={2} md={6} className="g-4">
             {OTHER_SKILLS.length > 0 &&
               OTHER_SKILLS.map(({ label, img }) => (
-                <Col>
+                <Col key={label}>
                   {" "}
                   <SkillCard skill={label} imageSrc={img} />{" "}
                 </Col>

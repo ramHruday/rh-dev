@@ -1,6 +1,9 @@
+@import "../../_neumorphism.scss";
+
 .app-nav {
   z-index: 999;
-  box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25);
+  @include neumorphic-debossed(8px);
+  box-shadow: none; // Remove old box-shadow
 }
 
 .app-pill-nav {
@@ -9,24 +12,25 @@
   position: fixed;
   left: 0px;
   right: 0px;
+  @include neumorphic-embossed(5px); // Apply a subtle embossed effect for the mobile nav
 }
 
-.neu-black {
-  border-radius: 15px;
-  background: #3d3e3f;
-  box-shadow: 7px 7px 14px #191c1f, -7px -7px 14px #292e33;
-}
-
-.neu-grey {
-  border-radius: 15px;
-  background: linear-gradient(315deg, #373839, #414243);
-  box-shadow: 7px 7px 14px #191c1f, -7px -7px 14px #292e33;
-}
-
-.hoverable-neu:hover {
-  a {
-    border-radius: 15px;
-    background: linear-gradient(315deg, #373839, #414243);
-    box-shadow: 7px 7px 14px #191c1f, -7px -7px 14px #292e33;
+.social-list a {
+  @include neumorphic-embossed(4px);
+  &:hover {
+    @include neumorphic-debossed(4px);
   }
+}
+
+.nav-list a svg {
+  padding: 0.5rem;
+  border-radius: 50%; // Make icons circular
+  @include neumorphic-flat();
+  &:hover {
+    @include neumorphic-embossed(3px);
+  }
+}
+
+.nav-list a.active svg {
+  @include neumorphic-debossed(3px); // Active state for navigation items
 }
