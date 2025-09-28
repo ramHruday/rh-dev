@@ -4,57 +4,48 @@ import './TypingEffectTitle.scss';
 interface TypingEffectTitleProps {
   messages: string[];
   typingSpeed?: number;
-  deletingSpeed?: number;
   delayBetweenMessages?: number;
 }
 
 const TypingEffectTitle: React.FC<TypingEffectTitleProps> = ({
   messages,
-  typingSpeed = 100,
-  deletingSpeed = 50,
+  typingSpeed = 60,
   delayBetweenMessages = 1500,
 }) => {
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [typingPause, setTypingPause] = useState(delayBetweenMessages);
+  const [isTyping, setIsTyping] = useState(true);
 
   useEffect(() => {
     let timer: NodeJS.Timeout;
 
-    const handleTyping = () => {
-      const fullText = messages[currentMessageIndex];
-
-      if (isDeleting) {
-        setCurrentText(fullText.substring(0, currentText.length - 1));
+    if (isTyping) {
+      if (currentText.length < messages[currentMessageIndex].length) {
+        timer = setTimeout(() => {
+          setCurrentText(messages[currentMessageIndex].slice(0, currentText.length + 1));
+        }, typingSpeed);
       } else {
-        setCurrentText(fullText.substring(0, currentText.length + 1));
+        // Pause after full message typed
+        timer = setTimeout(() => {
+          setIsTyping(false);
+        }, delayBetweenMessages);
       }
-
-      if (!isDeleting && currentText === fullText) {
-        // Pause at end of typing
-        setTypingPause(delayBetweenMessages);
-        setIsDeleting(true);
-      } else if (isDeleting && currentText === '') {
-        // Pause at end of deleting, move to next message
-        setIsDeleting(false);
+    } else {
+      // Move to next message after pause
+      timer = setTimeout(() => {
         setCurrentMessageIndex((prev) => (prev + 1) % messages.length);
-        setTypingPause(100); // Short pause before typing next message
-      }
-    };
-
-    timer = setTimeout(
-      handleTyping,
-      isDeleting ? deletingSpeed : typingSpeed + typingPause
-    );
+        setCurrentText('');
+        setIsTyping(true);
+      }, 500); // Short break before next message starts typing
+    }
 
     return () => clearTimeout(timer);
-  }, [currentText, isDeleting, currentMessageIndex, typingPause, messages, typingSpeed, deletingSpeed, delayBetweenMessages]);
+  }, [currentText, isTyping, currentMessageIndex, messages, typingSpeed, delayBetweenMessages]);
 
   return (
     <span className="typing-effect-title">
       {currentText}
-      <span className="typing-cursor"></span>
+      <span className="typing-cursor">|</span>
     </span>
   );
 };

@@ -11,25 +11,34 @@ interface UseProjectFiltering {
   allCategories: string[];
 }
 
-export const useProjectFiltering = (): UseProjectFiltering => {
+export const useProjectFiltering = (featuredProjectLabels?: string[]): UseProjectFiltering => {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
+  const baseProjects = useMemo(() => {
+    if (featuredProjectLabels) {
+      return projectsData.filter((project) =>
+        featuredProjectLabels.includes(project.label)
+      );
+    }
+    return projectsData;
+  }, [featuredProjectLabels]);
+
   const allTags = useMemo(
-    () => Array.from(new Set(projectsData.flatMap((project) => project.tags))),
-    []
+    () => Array.from(new Set(baseProjects.flatMap((project) => project.tags))),
+    [baseProjects]
   );
 
   const allCategories = useMemo(
     () =>
-      Array.from(new Set(projectsData.map((project) => project.category))).filter(
+      Array.from(new Set(baseProjects.map((project) => project.category))).filter(
         Boolean
       ) as string[],
-    []
+    [baseProjects]
   );
 
   const filteredProjects = useMemo(() => {
-    return projectsData.filter((project) => {
+    return baseProjects.filter((project) => {
       const matchesCategory = selectedCategory
         ? project.category === selectedCategory
         : true;
@@ -39,7 +48,7 @@ export const useProjectFiltering = (): UseProjectFiltering => {
           : selectedTags.some((tag) => project.tags.includes(tag));
       return matchesCategory && matchesTags;
     });
-  }, [selectedTags, selectedCategory]);
+  }, [selectedTags, selectedCategory, baseProjects]);
 
   return {
     filteredProjects,

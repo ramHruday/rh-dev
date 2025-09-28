@@ -1,13 +1,21 @@
-import React from 'react';
-import { Container, Row, Col, Button, Form } from 'react-bootstrap';
-import { GitHub, Linkedin, Mail } from 'react-feather';
-import './ContactSection.scss';
+import React from "react";
+import { Container, Row, Col, Button, Form } from "react-bootstrap";
+import { GitHub, Linkedin, Mail } from "react-feather";
+import { useTheme } from "../contexts/theme-context";
+import "./ContactSection.scss";
 
 interface ContactSectionProps {
   id?: string;
 }
 
 const ContactSection: React.FC<ContactSectionProps> = ({ id }) => {
+  const { theme } = useTheme();
+
+  const cursorLogo =
+    theme === "light-mode"
+      ? `${process.env.PUBLIC_URL}/assets/images/logos/AVATAR_CIRCLE_LIGHT.png`
+      : `${process.env.PUBLIC_URL}/assets/images/logos/AVATAR_CIRCLE_DARK.png`;
+
   return (
     <section id={id} className="contact-section-container py-5">
       <Container>
@@ -17,7 +25,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({ id }) => {
         <Row className="justify-content-center">
           <Col md={8} lg={6}>
             <p className="text-center mb-4 lead">
-              I'm always open to new opportunities and collaborations. Feel free to reach out!
+              I'm always open to new opportunities and collaborations. Feel free
+              to reach out!
             </p>
             <div className="d-flex justify-content-center mb-5 social-links">
               <Button
@@ -46,6 +55,28 @@ const ContactSection: React.FC<ContactSectionProps> = ({ id }) => {
                 <Mail size={30} />
               </Button>
             </div>
+            <p
+              className="text-center text-muted mb-4"
+              style={{ fontSize: "0.85rem" }}
+            >
+              <a
+                href="https://cursor.sh"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "inherit", textDecoration: "none" }}
+              >
+                built with cursor
+                <img
+                  src={cursorLogo}
+                  alt="Cursor Logo"
+                  style={{
+                    height: "2em",
+                    marginRight: "0.3em",
+                    verticalAlign: "middle",
+                  }}
+                />
+              </a>
+            </p>
           </Col>
         </Row>
       </Container>

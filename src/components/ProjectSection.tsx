@@ -8,6 +8,7 @@ import { FilterButtons } from "../components/FilterButtons";
 
 interface ProjectSectionProps {
   id?: string;
+  featuredProjectLabels?: string[]; // New optional prop
 }
 
 const ProjectSection: React.FC<ProjectSectionProps> = ({ id }) => {

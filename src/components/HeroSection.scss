@@ -5,9 +5,9 @@
   background-color: var(--color-background);
   color: var(--color-foreground);
   display: flex;
-  align-items: center;
+  // align-items: center; // Removed to allow content to flow from top
   justify-content: center;
-  padding: 2rem 0;
+  padding: 4rem 0 2rem; // Increased top padding, kept bottom padding
 
   .highlight {
     color: var(--bs-primary); // Using a Bootstrap primary color for highlight
