@@ -11,7 +11,7 @@ const Home: React.FC<IHomeprops> = (props) => {
     <Col sm="12" md="10" className="home-section d-flex align-items-center justify-content-center" id={props.id}>
       <div className="home-content neumorphic-debossed p-4 p-md-5 d-flex flex-column flex-md-row align-items-center justify-content-between w-100">
         <div className="text-content text-center text-md-start mb-4 mb-md-0">
-          <h1 className="display-4 monty fw-bold">Hi, I'm Hruday.</h1>
+          <h1 className="display-4 monty fw-bold">Hi, I'm Rama Hruday.</h1>
           <h3 className="monty text-muted mb-4">A Passionate Full-stack Developer & Innovator.</h3>
           <p className="lead mb-4">
             Building seamless web experiences and exploring the future of IoT with drones.

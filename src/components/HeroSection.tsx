@@ -18,7 +18,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ id }) => {
     <section id={id} className="hero-section-container d-flex align-items-center">
       <Container className="text-center">
         <h1 className="display-3 fw-bold mb-4">
-          Hi, I'm <span className="highlight">Hruday</span>,
+          Hi, I'm <span className="highlight">Rama Hruday</span>,
         </h1>
         <h2 className="lead mb-4">
           <TypingEffectTitle 

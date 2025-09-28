@@ -1,6 +1,6 @@
-import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import './AboutSection.scss';
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import "./AboutSection.scss";
 interface AboutSectionProps {
   id?: string;
 }
@@ -18,17 +18,22 @@ const AboutSection: React.FC<AboutSectionProps> = ({ id }) => {
           </Col> */}
           <Col md={7} className="about-content">
             <p className="lead">
-              Hello! I'm Hruday, a passionate Full-stack Developer and Innovator. 
-              I specialize in building robust and scalable web applications, with a keen interest in 
-              creating intuitive user experiences and exploring emerging technologies like the Internet of Drones.
+              Hello! I'm Hruday, a Data Engineer passionate about building
+              scalable, cloud-native data systems.
             </p>
             <p>
-              With a strong foundation in both front-end and back-end development, 
-              I thrive on transforming complex problems into elegant, efficient solutions. 
-              My goal is to create impactful digital products that are not only functional but also delightful to use.
+              At ProPetro Services, I design and optimize pipelines that power
+              real-time IoT analytics, financial reporting, and predictive
+              maintenance. My experience spans PySpark, Flink, Delta Lake, and
+              modern lakehouse architectures, with a focus on delivering data
+              solutions that are reliable, performant, and business-driven.
             </p>
             <p>
-              I am a Grad student at Texas Tech University, constantly seeking new challenges and opportunities to learn and grow.
+              I thrive on solving complex data challenges — from streaming
+              telemetry at scale to modeling financial systems — and enjoy
+              transforming raw data into actionable insights. Always exploring
+              new technologies, I aim to create data platforms that not only
+              meet today’s needs but also scale for tomorrow.
             </p>
           </Col>
         </Row>
