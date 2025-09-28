@@ -1,8 +1,8 @@
-import React from 'react';
-import { Container, Row, Col, Card, Badge, Button } from 'react-bootstrap';
-import { ExternalLink, GitHub } from 'react-feather';
-import './ProjectSection.scss';
-import { projectsData } from '../data/projectsData';
+import React from "react";
+import { Container, Row, Col, Card, Badge, Button } from "react-bootstrap";
+import { ExternalLink, GitHub } from "react-feather";
+import "./ProjectSection.scss";
+import { projectsData } from "../data/projectsData";
 
 interface ProjectSectionProps {
   id?: string;
@@ -19,13 +19,24 @@ const ProjectSection: React.FC<ProjectSectionProps> = ({ id }) => {
           {projectsData.map((project, index) => (
             <Col key={index}>
               <Card className="project-card neumorphic-embossed h-100">
-                <Card.Img variant="top" src={project.img} alt={project.label} className="project-image" />
+                {project.img ? (
+                  <Card.Img
+                    variant="top"
+                    src={`${process.env.PUBLIC_URL}/assets${project.img}`}
+                    alt={project.label}
+                    className="project-image"
+                  />
+                ) : null}
                 <Card.Body>
                   <Card.Title className="fw-bold">{project.label}</Card.Title>
                   <Card.Text>{project.desc}</Card.Text>
                   <div className="mb-3">
                     {project.tags.map((tech, techIndex) => (
-                      <Badge key={techIndex} pill className="tech-badge me-2 neumorphic-flat-pressed">
+                      <Badge
+                        key={techIndex}
+                        pill
+                        className="tech-badge me-2 neumorphic-flat-pressed"
+                      >
                         {tech}
                       </Badge>
                     ))}
@@ -34,12 +45,24 @@ const ProjectSection: React.FC<ProjectSectionProps> = ({ id }) => {
                 <Card.Footer className="d-flex justify-content-between align-items-center project-card-footer">
                   <div>
                     {project.githubUrl && (
-                      <Button variant="link" href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="project-link-button neumorphic-embossed-icon">
+                      <Button
+                        variant="link"
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-link-button neumorphic-embossed-icon"
+                      >
                         <GitHub size={20} />
                       </Button>
                     )}
                     {project.url && (
-                      <Button variant="link" href={project.url} target="_blank" rel="noopener noreferrer" className="project-link-button ms-2 neumorphic-embossed-icon">
+                      <Button
+                        variant="link"
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-link-button ms-2 neumorphic-embossed-icon"
+                      >
                         <ExternalLink size={20} />
                       </Button>
                     )}

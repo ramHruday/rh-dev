@@ -34,7 +34,7 @@
       width: 60px;
       height: 60px;
       object-fit: contain;
-      filter: grayscale(100%); // Make icons grayscale by default
+      // filter: grayscale(100%); // Make icons grayscale by default
       transition: filter 0.3s ease;
 
       &:hover {

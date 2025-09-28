@@ -27,6 +27,7 @@
       border-radius: 8px; // Slightly rounded corners for the image
       @include neumorphic-debossed(4px); // Subtle debossed effect for the image
       margin-bottom: 1rem;
+      width: 50%;
     }
 
     .card-title {

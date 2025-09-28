@@ -23,9 +23,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ id }) => {
         <h2 className="lead mb-4">
           <TypingEffectTitle 
             messages={roles} 
-            typingSpeed={100} // Faster typing speed
+            typingSpeed={200} // Faster typing speed
             deletingSpeed={50} // Faster deleting speed
-            delayBetweenMessages={1000} // Shorter delay between messages
+            delayBetweenMessages={0} // Shorter delay between messages
           />
         </h2>
         <Button variant="primary" href="#projects" className="hero-cta-button mt-3">

@@ -31,7 +31,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ id }) => {
                   <Card className="skill-card neumorphic-embossed h-100 d-flex flex-column align-items-center justify-content-center text-center p-3">
                     <Card.Img
                       variant="top"
-                      src={`../../assets${skill.iconUrl}`}
+                      src={`${process.env.PUBLIC_URL}/assets${skill.iconUrl}`}
                       alt={skill.name}
                       className="skill-icon mb-2"
                     />
