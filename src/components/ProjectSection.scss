@@ -27,7 +27,7 @@
       border-radius: 8px; // Slightly rounded corners for the image
       @include neumorphic-debossed(4px); // Subtle debossed effect for the image
       margin-bottom: 1rem;
-      width: 50%;
+      /* width: 50%; */ /* This should be handled by Bootstrap columns if responsiveness is desired */
     }
 
     .card-title {
@@ -74,6 +74,58 @@
       svg {
         color: var(--color-foreground);
       }
+    }
+  }
+}
+
+.accordion {
+  --bs-accordion-bg: var(--color-background);
+  --bs-accordion-color: var(--color-foreground);
+  --bs-accordion-border-color: transparent; /* Remove default borders */
+  border-radius: 1rem;
+
+  .accordion-item {
+    border: none; /* Remove item borders as well */
+    background-color: transparent;
+    margin-bottom: 0.95rem; /* Space between accordion items */
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .accordion-header {
+      .accordion-button {
+        @include neumorphic-flat-pressed(4px); // Flat pressed for header
+        background-color: var(--color-background);
+        color: var(--color-foreground);
+        border-radius: 1rem; /* Rounded corners for buttons */
+        transition: all 0.2s ease-in-out;
+        padding: 1rem 1.25rem;
+        border: none;
+
+        &:not(.collapsed) {
+          @include neumorphic-debossed(4px); // Debossed when open
+          background-color: var(--color-background);
+          color: var(--bs-primary);
+          box-shadow: inset 2px 2px 5px var(--color-shadow-dark), inset -3px -3px 7px var(--color-shadow-light);
+        }
+
+        &::after {
+          filter: invert(var(--filter-invert-value)); /* Adjust icon color for dark/light mode */
+        }
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+
+    .accordion-body {
+      @include neumorphic-embossed(3px); // Subtle embossed for body
+      background-color: var(--color-background);
+      border-radius: 1rem;
+      margin-top: 0.5rem;
+      padding: 1.25rem;
     }
   }
 }

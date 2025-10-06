@@ -15,7 +15,7 @@ export const skillsData: SkillCategory[] = [
       { name: "JavaScript", iconUrl: "/images/skills/javascript.webp" },
       { name: "TypeScript", iconUrl: "/images/skills/typescript.webp" },
       { name: "Python", iconUrl: "/images/skills/python.webp" },
-      { name: "Java", iconUrl: "/images/skills/java.webp" },
+      { name: "C++", iconUrl: "/images/skills/cpp.webp" },
     ],
   },
   {

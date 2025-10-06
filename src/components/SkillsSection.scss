@@ -32,7 +32,7 @@
 
     .skill-icon {
       width: 60px;
-      height: 60px;
+      height: auto; /* Allow height to be determined by content or parent */
       object-fit: contain;
       // filter: grayscale(100%); // Make icons grayscale by default
       transition: filter 0.3s ease;

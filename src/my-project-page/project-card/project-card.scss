@@ -10,6 +10,8 @@
   }
 
   .project-image {
+    height: 300px;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
     border-radius: 8px; // Slightly rounded corners for the image
     @include neumorphic-debossed(3px); // Subtle debossed effect for the image
     margin-bottom: 1rem;

@@ -4,23 +4,23 @@ import OverlayLink from "../../components/overlay-link/overlay-link";
 import "./side-nav.scss";
 
 export interface ISideNavbarProps {
-  width: string | number;
+  // width: string | number;
 }
 
-const SideNavBar: React.FC<ISideNavbarProps> = ({ width }) => {
+const SideNavBar: React.FC<ISideNavbarProps> = ({ /* width */ }) => {
   return (
-    <div className="postion-relative d-none d-md-block" style={{ width }}>
-      <div className="position-fixed h-100" style={{ width }}>
+    <div className="postion-relative d-none d-md-block side-nav-wrapper">
+      <div className="position-fixed h-100 side-nav-fixed-container">
         <nav
           className="app-nav d-none d-md-flex flex-column justify-content-between position-sticky h-100"
-          style={{ width: "4.2rem" }}
+          // style={{ width: "4.2rem" }}
         >
           <NavItemList className="nav-list w-100 h-60 d-flex flex-column align-items-center justify-content-around" />
           <SocialWebBox />
         </nav>
         <nav
-          className="app-pill-nav d-md-none"
-          style={{ height: "3.5rem", fontSize: "1.4rem" }}
+          className="app-pill-nav d-md-none mobile-nav-styles"
+          // style={{ height: "3.5rem", fontSize: "1.4rem" }}
         >
           <NavItemList className="nav-list w-100 h-100 d-flex flex-row align-items-center justify-content-around" />
         </nav>

@@ -14,8 +14,7 @@ const Aboutme: React.FC<IAboutmeprops> = (props) => {
         <img
           src={uc}
           alt="site under construction"
-          className=""
-          style={{ width: 400, height: "auto", maxWidth: "95%" }}
+          className="about-me-image"
         />
       </Col>
     </Col>

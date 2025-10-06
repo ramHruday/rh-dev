@@ -6,6 +6,14 @@
   box-shadow: none; // Remove old box-shadow
 }
 
+.side-nav-wrapper {
+  width: 5rem; /* Fixed width for the side navigation */
+}
+
+.side-nav-fixed-container {
+  width: 5rem; /* Fixed width for the side navigation */
+}
+
 .app-pill-nav {
   z-index: 999;
   bottom: 0;
@@ -13,6 +21,11 @@
   left: 0px;
   right: 0px;
   @include neumorphic-embossed(5px); // Apply a subtle embossed effect for the mobile nav
+}
+
+.mobile-nav-styles {
+  height: 3.5rem;
+  font-size: 1.4rem;
 }
 
 .social-list a {

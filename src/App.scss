@@ -68,19 +68,10 @@ a {
   right: 1.5rem;
   z-index: 1001; // Ensure it's above other elements
   // Styles from ThemeToggleButton.scss will handle the neumorphism, size, etc.
+}
 
-  @media (max-width: 767.98px) {
-    top: 1rem; // Adjust for smaller screens
-    right: 1rem;
-    padding: 0.8rem; // Smaller padding
-    width: 3rem; // Smaller size
-    height: 3rem;
-
-    svg {
-      width: 18px;
-      height: 18px;
-    }
-  }
+.logo-positioning {
+  right: 10px;
 }
 
 /* Remove old .neu-div as it's replaced by mixins */

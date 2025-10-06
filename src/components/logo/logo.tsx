@@ -5,8 +5,7 @@ interface ILogoProps {}
 const Logo: React.FC<ILogoProps> = () => {
   return (
     <Image
-      className="position-fixed"
-      style={{ right: 10 }}
+      className="position-fixed logo-positioning"
       src="../../logo.svg"
       roundedCircle
     />

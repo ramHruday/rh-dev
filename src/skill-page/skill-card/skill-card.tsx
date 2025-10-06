@@ -13,10 +13,9 @@ const SkillCard: React.FC<ISkillCardprops> = (props) => {
       {card.imageSrc ? (
         <Card.Img
           variant="top"
-          className="p-2 m-auto overflow-hidden"
+          className="p-2 m-auto overflow-hidden skill-card-image"
           src={require(`./../../assets${card.imageSrc}`)}
           alt={card.skill}
-          style={{ width: "auto", height: "4.5rem", maxWidth: "100%" }}
         />
       ) : null}
       <p className="text-center">{card.skill}</p>

@@ -5,21 +5,25 @@ import SkillsSection from './SkillsSection'; // Import SkillsSection
 import ContactSection from './ContactSection'; // Import ContactSection
 import SideNavigation from './SideNavigation'; // Import SideNavigation
 import ThemeToggleButton from './ThemeToggleButton'; // Import ThemeToggleButton
+import { Container, Row, Col } from "react-bootstrap";
 
 const LandingPage: React.FC = () => {
-  const featuredProjectLabels = ["IoT Telemetry Pipeline", "3D IoT Platform", "Yettey"]; // Define your featured projects
 
   return (
     <div className="landing-page-container">
       <SideNavigation /> {/* Render SideNavigation */}
       <ThemeToggleButton /> {/* Render ThemeToggleButton at the top level */}
-      <div className="main-content">
-        <HeroSection id="home" /> {/* Render HeroSection */}
-        {/* <ProjectSection id="featured-projects" featuredProjectLabels={featuredProjectLabels} /> Featured Projects */}
-        <ProjectSection id="projects" /> {/* All Projects */}
-        <SkillsSection id="skills" /> {/* Render SkillsSection */}
-        <ContactSection id="contact" /> {/* Render ContactSection */}
-      </div>
+      <Container fluid className="main-content ms-md-5">
+        <Row>
+          <Col>
+            <HeroSection id="home" /> {/* Render HeroSection */}
+            {/* <ProjectSection id="featured-projects" featuredProjectLabels={featuredProjectLabels} /> Featured Projects */}
+            <ProjectSection id="projects" /> {/* All Projects */}
+            <SkillsSection id="skills" /> {/* Render SkillsSection */}
+            <ContactSection id="contact" /> {/* Render ContactSection */}
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 };

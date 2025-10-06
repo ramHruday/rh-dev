@@ -15,16 +15,10 @@
 
   h1 {
     font-size: 3.5rem;
-    @media (min-width: 768px) {
-      font-size: 4.5rem;
-    }
   }
 
   .lead {
     font-size: 1.25rem;
-    @media (min-width: 768px) {
-      font-size: 1.5rem;
-    }
   }
 
   .hero-cta-button {

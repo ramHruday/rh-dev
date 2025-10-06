@@ -14,7 +14,6 @@ const ProjectCard: React.FC<IProjects> = (props) => {
             className="p-2 m-auto overflow-hidden project-image"
             src={require(`./../../assets${props.img}`)}
             alt={props.label}
-            style={{ width: "100%", height: 300, overflow: "hidden" }}
           />
         </a>
       ) : null}
